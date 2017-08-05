@@ -11,7 +11,7 @@ Welcome again, I explain the how to publish this blog into github
 [ Github pages ](https://pages.github.com/) it's amazing, exists many ways to create one, in my case 
 I created a new repo into the github website, called **andru255.github.io**, because its the format to use **[my-nickname].github.io**
 
-![New github repo](/posts/how-publish-in-github/creating-github-repo.gif)
+![New github repo](../how-publish-in-github/creating-github-repo.gif)
 
 Reading the instructions when its created a new repo, we testing clone and put a single html file previously:
 
@@ -96,7 +96,7 @@ baseUrl="http://example.org"
 to
 
 ```
-baseUrl="https://andru255.github.io"
+baseUrl="https://andru255.github.io/blog"
 ```
 
 Then, generate the output
@@ -116,6 +116,8 @@ Great, I have output generated, sending to my github repo:
 
 ```
 
+## 1st attempt
+
 Trying to submit my changes...
 
 Oh! a little trouble, I testing with my index.html (I don't explain here about git commands), 
@@ -125,16 +127,48 @@ in this escenario I forced my changes with this command:
 ~ git push origin +master:master
 ```
 
-Good!
+Good! ... Visiting https://andru255.github.io/blog
 
+Holy ..! I can see only a 404 :(
+
+## 2nd attempt
+
+Reading the [ github docs ](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#publishing-your-github-pages-site-from-a-docs-folder-on-your-master-branch) 
+
+I generate the static output into a **blog** instead of **public** folder, I modify the **config.toml** files, adding this line:
+
+```
+publishDir = "blog"
+```
+
+Then, run again in console:
+
+```
+~ hugo -D
+```
+
+Great! If exists a new folder called **blog**, please remove the **public** folder for not confuse.
+
+Well done, submiting my changes:
+
+```
+~ git add .
+
+~ git commit -am "2nd attempt: My blog with new output" 
+
+~ git push origin master:master
+
+```
 
 ### NOTES
 
 - May be shows a warning like a empty repository when cloning that repo first time, but don't worry
 - If we clone with https protocol, It's necessary puts our credentials when trying to push a change
+- I changed the baseUrl path from https://andru255.github.io to https://andru255.github.io/blog for github pages rules
 
 ### Credits / Thanks to:
 
 - [https://pages.github.com/](https://pages.github.com/)
 - [https://gohugo.io/getting-started/usage/](https://gohugo.io/getting-started/usage/)
 - [https://www.youtube.com/watch?v=3wkR8GyDODs](https://www.youtube.com/watch?v=3wkR8GyDODs)
+- [https://help.github.com/](https://help.github.com/)

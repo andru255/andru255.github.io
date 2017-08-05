@@ -1,4 +1,5 @@
-baseURL = "http://andru255.github.io/"
+baseURL = "http://andru255.github.io/blog"
 languageCode = "en-us"
 title = "andru255"
 theme = "hugo-classic"
+publishDir = "blog"
