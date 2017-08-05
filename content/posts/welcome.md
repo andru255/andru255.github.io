@@ -65,7 +65,7 @@ Where:
 
 Finally, open your favorite browser and go to http://localhost:1313
 
-If do you want to continue about how to publish into github, please open this [link](/posts/how-publish-in-github)
+If do you want to continue about how to publish into github, please open this [link](../how-publish-in-github)
 
 ### Credits / Thanks to:
 

@@ -68,7 +68,7 @@ Finalmente, para ver el sitio, abrimos un navegador e ingresamos a la dirección
 
 ## NOTAS
 
-Actualmente estoy desarrollando posts en [inglés](/posts/welcome) para un futuro manejo de i18n, por 
+Actualmente estoy desarrollando posts en [inglés](../welcome) para un futuro manejo de i18n, por 
 el momento explicaré de a pocos el poder de hugo para crear un blog :)
 
 ### Créditos / gracias a:
