@@ -1,0 +1,4 @@
+baseURL = "http://andru255.github.io/"
+languageCode = "en-us"
+title = "andru255"
+theme = "hugo-classic"

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bienvenido | andru255</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <header>
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <nav>
+    <ul>
+      
+      
+      <li class="pull-left ">
+        <a href="http://andru255.github.io/">/home/andru255</a>
+      </li>
+      
+
+      
+
+    </ul>
+  </nav>
+</header>
+
+  </head>
+
+  <body>
+    <br/>
+
+<div class="article-meta">
+<h1><span class="title">Bienvenido</span></h1>
+
+<h2 class="date">2017/08/05</h2>
+<p class="terms">
+  
+  
+  
+  
+  
+</p>
+</div>
+
+
+
+<main>
+
+
+<p>Bienvenido a mi blog, explicaré sobre el cómo llegué a implementarlo</p>
+
+<h2 id="pre-requisitos">Pre-requisitos</h2>
+
+<ul>
+<li><a href="https://git-scm.com/"> Git </a> v2.13.0</li>
+<li><a href="https://github.com"> Una cuenta en github </a> Si no tienes una, que esperas!</li>
+<li><a href="https://gohugo.io/"> Hugo </a> v0.25.1</li>
+</ul>
+
+<p>Actualmente uso una máquina en lubuntu 16.04</p>
+
+<h2 id="creando-mi-sitio-web">Creando mi sitio web</h2>
+
+<p>Como standard, voy a trabajar en el directorio <em>/home/</em>, y realizo los siguientes comandos:</p>
+
+<pre><code>~ mkdir mysites
+
+~ cd mysites
+
+~ hugo new site [your-site]
+
+</code></pre>
+
+<p><em>[your-site]</em> crea una carpeta con el nombre que le has puesto, en mi caso lo hice con el nombre andru255.github.io</p>
+
+<h2 id="agregando-un-tema">Agregando un tema</h2>
+
+<p>Uso <a href="https://github.com/goodroot/hugo-classic">hugo-classic</a>, y así lo instalé</p>
+
+<pre><code>~ cd [your-site]
+
+~ git init
+
+~ git submodule add https://github.com/goodroot/hugo-classic.git themes/hugo-classic 
+
+~ echo 'theme = &quot;hugo-classic&quot;' &gt;&gt; config.toml 
+</code></pre>
+
+<h2 id="creando-el-post-de-bienvenida">Creando el post de bienvenida</h2>
+
+<pre><code>~ hugo new post/welcome.md
+
+~ echo &quot;# Hola, gracias hugo por crear este blog :)&quot; &gt;&gt; post/welcome.md
+</code></pre>
+
+<h2 id="está-vivo-está-vivo">Está vivo! está vivo!</h2>
+
+<p>Para ver nuestro blog en el navegador, ejecutamos el siguiente comando:</p>
+
+<pre><code>~ hugo server -D -v
+</code></pre>
+
+<p>Donde:</p>
+
+<ul>
+<li><em>-D</em>, inicia el proceso, y dicho proceso estará atento a todo cambio que realices</li>
+<li><em>-v</em>, Este parámetro te permite ver más detalladamente que hace dicho proceso</li>
+</ul>
+
+<p>Finalmente, para ver el sitio, abrimos un navegador e ingresamos a la dirección url: <a href="http://localhost:1313">http://localhost:1313</a></p>
+
+<h2 id="notas">NOTAS</h2>
+
+<p>Actualmente estoy desarrollando posts en <a href="/posts/welcome">inglés</a> para un futuro manejo de i18n, por
+el momento explicaré de a pocos el poder de hugo para crear un blog :)</p>
+
+<h3 id="créditos-gracias-a">Créditos / gracias a:</h3>
+
+<ul>
+<li><a href="https://gohugo.io/getting-started/quick-start/">https://gohugo.io/getting-started/quick-start/</a></li>
+<li><a href="https://gohugo.io/getting-started/installing/">https://gohugo.io/getting-started/installing/</a></li>
+<li><a href="https://www.youtube.com/watch?v=3wkR8GyDODs">https://www.youtube.com/watch?v=3wkR8GyDODs</a></li>
+</ul>
+
+</main>
+
+    <footer>
+      
+<script async src="//yihui.name/js/center-img.js"></script>
+
+      
+    </footer>
+  </body>
+</html>
+

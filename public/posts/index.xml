@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on andru255</title>
+    <link>http://andru255.github.io/posts/</link>
+    <description>Recent content in Posts on andru255</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 05 Aug 2017 12:30:02 -0500</lastBuildDate>
+    
+	<atom:link href="http://andru255.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How Publish In Github</title>
+      <link>http://andru255.github.io/posts/how-publish-in-github/</link>
+      <pubDate>Sat, 05 Aug 2017 12:30:02 -0500</pubDate>
+      
+      <guid>http://andru255.github.io/posts/how-publish-in-github/</guid>
+      <description>Welcome again, I explain the how to publish this blog into github
+Understanding github pages Github pages it&amp;rsquo;s amazing, exists many ways to create one, in my case I created a new repo into the github website, called andru255.github.io, because its the format to use [my-nickname].github.io
+Reading the instructions when its created a new repo, we testing clone and put a single html file previously:
+~ git clone https://github.com/andru255/andru255.github.io ~/my-sites/test-my-github-blog ~ cd ~/my-sites/test-my-github-blog ~ echo &amp;quot;This is my blog, A let&#39;s make it great :)&amp;quot; &amp;gt; index.</description>
+    </item>
+    
+    <item>
+      <title>Bienvenido</title>
+      <link>http://andru255.github.io/posts/bienvenido/</link>
+      <pubDate>Sat, 05 Aug 2017 12:17:18 -0500</pubDate>
+      
+      <guid>http://andru255.github.io/posts/bienvenido/</guid>
+      <description>Bienvenido a mi blog, explicaré sobre el cómo llegué a implementarlo
+Pre-requisitos  Git  v2.13.0 Una cuenta en github  Si no tienes una, que esperas! Hugo  v0.25.1  Actualmente uso una máquina en lubuntu 16.04
+Creando mi sitio web Como standard, voy a trabajar en el directorio /home/, y realizo los siguientes comandos:
+~ mkdir mysites ~ cd mysites ~ hugo new site [your-site]  [your-site] crea una carpeta con el nombre que le has puesto, en mi caso lo hice con el nombre andru255.</description>
+    </item>
+    
+    <item>
+      <title>Welcome</title>
+      <link>http://andru255.github.io/posts/welcome/</link>
+      <pubDate>Sun, 30 Jul 2017 17:10:06 +0000</pubDate>
+      
+      <guid>http://andru255.github.io/posts/welcome/</guid>
+      <description>Welcome to my blog, I explain how setup that site
+Pre-requisites  Git  v2.13.0 An github account  If you don&amp;rsquo;t have, make one! Hugo  v0.25.1  Currently I use a lubuntu v16.04 distro
+Setup a new site ~ mkdir mysites ~ cd mysites ~ hugo new site [my-site]  [my-site] creates a folder with this name, in my case I named andru255.github.io
+Adding a theme I use hugo-classic, so let&amp;rsquo;s start to install</description>
+    </item>
+    
+  </channel>
+</rss>

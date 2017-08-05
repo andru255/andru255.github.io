@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome | andru255</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <header>
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <nav>
+    <ul>
+      
+      
+      <li class="pull-left ">
+        <a href="http://andru255.github.io/">/home/andru255</a>
+      </li>
+      
+
+      
+
+    </ul>
+  </nav>
+</header>
+
+  </head>
+
+  <body>
+    <br/>
+
+<div class="article-meta">
+<h1><span class="title">Welcome</span></h1>
+
+<h2 class="date">2017/07/30</h2>
+<p class="terms">
+  
+  
+  
+  
+  
+</p>
+</div>
+
+
+
+<main>
+
+
+<p>Welcome to my blog, I explain how setup that site</p>
+
+<h2 id="pre-requisites">Pre-requisites</h2>
+
+<ul>
+<li><a href="https://git-scm.com/"> Git </a> v2.13.0</li>
+<li><a href="https://github.com"> An github account  </a> If you don&rsquo;t have, make one!</li>
+<li><a href="https://gohugo.io/"> Hugo </a> v0.25.1</li>
+</ul>
+
+<p>Currently I use a <a href="http://lubuntu.net/">lubuntu</a> v16.04 distro</p>
+
+<h2 id="setup-a-new-site">Setup a new site</h2>
+
+<pre><code>~ mkdir mysites
+
+~ cd mysites
+
+~ hugo new site [my-site]
+
+</code></pre>
+
+<p><em>[my-site]</em> creates a folder with this name, in my case I named andru255.github.io</p>
+
+<h2 id="adding-a-theme">Adding a theme</h2>
+
+<p>I use <a href="https://github.com/goodroot/hugo-classic">hugo-classic</a>, so let&rsquo;s start to install</p>
+
+<pre><code>~ cd [my-site]
+
+~ git init
+
+~ git submodule add https://github.com/goodroot/hugo-classic.git themes/hugo-classic 
+
+~ echo 'theme = &quot;hugo-classic&quot;' &gt;&gt; config.toml 
+</code></pre>
+
+<h2 id="creating-a-welcome-post">Creating a welcome post</h2>
+
+<pre><code>~ hugo new post/welcome.md
+
+~ echo &quot;# Hi, welcome to my new blog :)&quot; &gt;&gt; post/welcome.md
+</code></pre>
+
+<h2 id="a-live-site">A live site!</h2>
+
+<p>For start our live site in local</p>
+
+<pre><code>~ hugo server -D -v
+</code></pre>
+
+<p>Where:</p>
+
+<ul>
+<li><em>server</em>, start the daemon, and it&rsquo;s listen about new changes</li>
+<li><em>-D</em>, shows content marked as draft</li>
+<li><em>-v</em>, This parameter gives a detail info of our site when its start</li>
+</ul>
+
+<p>Finally, open your favorite browser and go to <a href="http://localhost:1313">http://localhost:1313</a></p>
+
+<p>If do you want to continue about how to publish into github, please open this <a href="/posts/how-publish-in-github">link</a></p>
+
+<h3 id="credits-thanks-to">Credits / Thanks to:</h3>
+
+<ul>
+<li><a href="https://gohugo.io/getting-started/quick-start/">https://gohugo.io/getting-started/quick-start/</a></li>
+<li><a href="https://gohugo.io/getting-started/installing/">https://gohugo.io/getting-started/installing/</a></li>
+<li><a href="https://www.youtube.com/watch?v=3wkR8GyDODs">https://www.youtube.com/watch?v=3wkR8GyDODs</a></li>
+</ul>
+
+</main>
+
+    <footer>
+      
+<script async src="//yihui.name/js/center-img.js"></script>
+
+      
+    </footer>
+  </body>
+</html>
+
