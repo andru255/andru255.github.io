@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Handling Images | andru255</title>
+    <link rel="stylesheet" href="/blog/css/style.css" />
+    <link rel="stylesheet" href="/blog/css/fonts.css" />
+    <header>
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <nav>
+    <ul>
+      
+      
+      <li class="pull-left ">
+        <a href="http://andru255.github.io/blog">/home/andru255</a>
+      </li>
+      
+
+      
+
+    </ul>
+  </nav>
+</header>
+
+  </head>
+
+  <body>
+    <br/>
+
+<div class="article-meta">
+<h1><span class="title">Handling Images</span></h1>
+
+<h2 class="date">2017/09/04</h2>
+<p class="terms">
+  
+  
+  
+  
+  
+</p>
+</div>
+
+
+
+<main>
+
+
+<p>In this post, I explain my style of work with images</p>
+
+<h2 id="understanding-the-folder-content">Understanding the folder content</h2>
+
+<p>The folder <strong>content</strong> has all posts in <strong>.md</strong> extension, simply :)</p>
+
+<h2 id="implementation">Implementation</h2>
+
+<p>I create a post called <strong>handling-images</strong>:</p>
+
+<pre><code>~ cd [my-site]
+
+~ hugo new posts/handling-images
+
+</code></pre>
+
+<p>Then, I see my post in format .md, in this path <strong>[my-site]/content/posts/handling-images.md</strong></p>
+
+<p>Awesome!, we need go to <strong>posts</strong> folder, and create for standard a folder with the same name of my post</p>
+
+<pre><code>~ cd [my-site]/content/posts/
+
+~ mkdir handling-images
+
+</code></pre>
+
+<p>Nice, once created, we allow my image called <strong>awesome-bro.jpg</strong> in that folder, by commands or a finder.</p>
+
+<p>Then, I put this code into my file <strong>handling-images.md</strong>:</p>
+
+<pre><code>![cool](../handling-images/awesome-bro.jpg)
+</code></pre>
+
+<p><img src="../handling-images/awesome-bro.jpg" alt="cool" /></p>
+
+<p>Cool!, at the moment exists to link to some new website, no redimentions, title or some attribute directly on markdown:</p>
+
+<p>Putting this code into my file <strong>handling-images.md</strong>:</p>
+
+<pre><code>[![](../handling-images/github.png)](http://github.com/andru255)
+</code></pre>
+
+<p><a href="http://github.com/andru255"><img src="../handling-images/github.png" alt="" /></a></p>
+
+<h3 id="credits-thanks-to">Credits / Thanks to:</h3>
+
+<ul>
+<li><a href="https://pages.github.com/">https://pages.github.com/</a></li>
+<li><a href="https://meta.stackexchange.com/a/38917">https://meta.stackexchange.com/a/38917</a></li>
+<li><a href="https://github.com/gohugoio/hugo/issues/1014">https://github.com/gohugoio/hugo/issues/1014</a></li>
+<li><a href="https://gist.github.com/uupaa/f77d2bcf4dc7a294d109">https://gist.github.com/uupaa/f77d2bcf4dc7a294d109</a></li>
+</ul>
+
+</main>
+
+    <footer>
+      
+<script async src="//yihui.name/js/center-img.js"></script>
+
+      
+    </footer>
+  </body>
+</html>
+

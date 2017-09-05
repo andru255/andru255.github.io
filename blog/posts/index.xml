@@ -6,10 +6,23 @@
     <description>Recent content in Posts on andru255</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 05 Aug 2017 12:30:02 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 04 Sep 2017 19:14:21 -0500</lastBuildDate>
     
 	<atom:link href="http://andru255.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Handling Images</title>
+      <link>http://andru255.github.io/blog/posts/handling-images/</link>
+      <pubDate>Mon, 04 Sep 2017 19:14:21 -0500</pubDate>
+      
+      <guid>http://andru255.github.io/blog/posts/handling-images/</guid>
+      <description>In this post, I explain my style of work with images
+Understanding the folder content The folder content has all posts in .md extension, simply :)
+Implementation I create a post called handling-images:
+~ cd [my-site] ~ hugo new posts/handling-images  Then, I see my post in format .md, in this path [my-site]/content/posts/handling-images.md
+Awesome!, we need go to posts folder, and create for standard a folder with the same name of my post</description>
+    </item>
     
     <item>
       <title>How Publish In Github</title>
