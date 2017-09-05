@@ -44,9 +44,9 @@ I use [hugo-classic](https://github.com/goodroot/hugo-classic), so let's start t
 ## Creating a welcome post
 
 ```
-~ hugo new post/welcome.md
+~ hugo new posts/welcome.md
 
-~ echo "# Hi, welcome to my new blog :)" >> post/welcome.md
+~ echo "# Hi, welcome to my new blog :)" >> posts/welcome.md
 ```
 
 ## A live site!

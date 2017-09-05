@@ -46,9 +46,9 @@ Uso [hugo-classic](https://github.com/goodroot/hugo-classic), y así lo instalé
 ## Creando un post de bienvenida
 
 ```
-~ hugo new post/welcome.md
+~ hugo new posts/welcome.md
 
-~ echo "# Hi, gracias hugo por crear mi blog :)" >> post/welcome.md
+~ echo "# Hi, gracias hugo por crear mi blog :)" >> posts/welcome.md
 ```
 
 ##  Está vivo! está vivo!
