@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="/blog/favicon.ico" />
+    <title>Adding a favicon | andru255</title>
+    <link rel="stylesheet" href="/blog/css/style.css" />
+    <link rel="stylesheet" href="/blog/css/fonts.css" />
+    <header>
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <nav>
+    <ul>
+      
+      
+      <li class="pull-left ">
+        <a href="http://andru255.github.io/blog">/home/andru255</a>
+      </li>
+      
+
+      
+
+    </ul>
+  </nav>
+</header>
+
+  </head>
+
+  <body>
+    <br/>
+
+<div class="article-meta">
+<h1><span class="title">Adding a favicon</span></h1>
+
+<h2 class="date">2017/10/14</h2>
+<p class="terms">
+  
+  
+  
+  
+  
+</p>
+</div>
+
+
+
+<main>
+
+
+<p>Hi this is my custom favicon and I adding to my blog with some steps:</p>
+
+<p><img src="../adding-favicon/favicon.png" alt="my favicon on png" /></p>
+
+<p>With the image on *<strong>.png</strong> extension, I process to the web to make my *<strong>.ico</strong> file: <a href="http://www.favicon.cc/">http://www.favicon.cc/</a></p>
+
+<p>Then download the generated file *<strong>.ico</strong>, and copy my favicon into the folder:</p>
+
+<pre><code>~ cp ~/Downloads/favicon.ico ~/mysites/andru255.github.io/themes/hugo-classic/favicon.ico
+</code></pre>
+
+<p>In my case I founded the <strong>head</strong> html tag in the file  <strong>~/mysites/andru255.github.io/themes/hugo-classic/layouts/partials/header.html</strong>, and I put above the tag <strong>title</strong></p>
+
+<pre><code>&lt;link rel=&quot;shortcut icon&quot; type=&quot;image/x-icon&quot; href=&quot;{{ &quot;/favicon.ico&quot; | relURL }}&quot; /&gt;
+</code></pre>
+
+<p>With that code indicates to my browser <strong>My site has a custom favicon, please don&rsquo;t put your default browser favicon</strong>.</p>
+
+<p>Before submit my changes, I test before on localhost <a href="/blog/posts/welcome#a-live-site">following the steps of getting up a local hugo server</a></p>
+
+<p>Then, I need to build and submit my changes to my repo:</p>
+
+<pre><code>~ cd ~/my-sites/andru255.github.io/
+
+~ hugo -D
+
+~ git commit -am &quot;feat(updating-the-theme): my favicon is already&quot;
+</code></pre>
+
+<p>And must be show in a tab of your favorite browser like this:</p>
+
+<p><img src="../adding-favicon/tab-example.png" alt="tab-blog" /></p>
+
+<h3 id="credits-thanks-to">credits / Thanks to:</h3>
+
+<ul>
+<li><a href="http://www.favicon.cc/">http://www.favicon.cc/</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Favicon">Favicon - Wikipedia</a></li>
+</ul>
+
+</main>
+
+    <footer>
+      
+<script async src="//yihui.name/js/center-img.js"></script>
+
+      
+    </footer>
+  </body>
+</html>
+
