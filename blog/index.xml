@@ -6,10 +6,23 @@
     <description>Recent content on andru255</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Oct 2017 13:29:40 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 21 Oct 2017 23:41:37 -0500</lastBuildDate>
     
 	<atom:link href="http://andru255.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Adding Syntax Code Highlight</title>
+      <link>http://andru255.github.io/blog/posts/adding-syntax-code-highlight/</link>
+      <pubDate>Sat, 21 Oct 2017 23:41:37 -0500</pubDate>
+      
+      <guid>http://andru255.github.io/blog/posts/adding-syntax-code-highlight/</guid>
+      <description>Hi, many of my tutorials needs to hightlight the instrucctions code or commands on markdown, starting and ending a block with ``` create a block of code with the highlighter plugin.
+For example, on my blog, when I writing with markdown code shows:
+It&amp;rsquo;s so simply, following this steps:
+In my case I founded a default highlight into the head html tag in the file ~/mysites/andru255.github.io/themes/hugo-classic/layouts/partials/head_custom.html
+&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css&amp;quot;&amp;gt;  And I remove that code with a great highlighter called drakula, following in the oficial page I put that code instead of atom-one-light</description>
+    </item>
     
     <item>
       <title>Adding a favicon</title>
