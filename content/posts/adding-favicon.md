@@ -1,7 +1,7 @@
 ---
 title: "Adding a favicon"
 date: 2017-10-14T13:29:40-05:00
-draft: true
+draft: false
 ---
 
 Hi this is my custom favicon and I adding to my blog with some steps:

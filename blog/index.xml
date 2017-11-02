@@ -6,9 +6,95 @@
     <description>Recent content on andru255</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Wed, 01 Nov 2017 19:49:06 -0500</lastBuildDate>
     
 	<atom:link href="http://andru255.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Draft Content</title>
+      <link>http://andru255.github.io/blog/posts/draft-content/</link>
+      <pubDate>Wed, 01 Nov 2017 19:49:06 -0500</pubDate>
+      
+      <guid>http://andru255.github.io/blog/posts/draft-content/</guid>
+      <description>Hi, in this post, I talk about draft value of every post, what&amp;rsquo;s that?
+Draft content CMSs like drupal, wordpress and gohugo shows a default state of every post, called draft.
+This type of content, is for pre-production reasons, for review, or approve for me, or for a group of people to release a good post or content. I think that&amp;rsquo;s a good practice for many reasons like you see.</description>
+    </item>
+    
+    <item>
+      <title>Adding Syntax Code Highlight</title>
+      <link>http://andru255.github.io/blog/posts/adding-syntax-code-highlight/</link>
+      <pubDate>Sat, 21 Oct 2017 23:41:37 -0500</pubDate>
+      
+      <guid>http://andru255.github.io/blog/posts/adding-syntax-code-highlight/</guid>
+      <description>Hi, many of my tutorials needs to hightlight the instrucctions code or commands on markdown, starting and ending a block with ``` create a block of code with the highlighter plugin.
+For example, on my blog, when I writing with markdown code shows:
+It&amp;rsquo;s so simply, following this steps:
+In my case I founded a default highlight into the head html tag in the file ~/mysites/andru255.github.io/themes/hugo-classic/layouts/partials/head_custom.html
+&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css&amp;quot;&amp;gt;  And I remove that code with a great highlighter called drakula, following in the oficial page I put that code instead of atom-one-light</description>
+    </item>
+    
+    <item>
+      <title>Adding a favicon</title>
+      <link>http://andru255.github.io/blog/posts/adding-favicon/</link>
+      <pubDate>Sat, 14 Oct 2017 13:29:40 -0500</pubDate>
+      
+      <guid>http://andru255.github.io/blog/posts/adding-favicon/</guid>
+      <description>Hi this is my custom favicon and I adding to my blog with some steps:
+With the image on *.png extension, I process to the web to make my *.ico file: http://www.favicon.cc/
+Then download the generated file *.ico, and copy my favicon into the folder:
+~ cp ~/Downloads/favicon.ico ~/mysites/andru255.github.io/themes/hugo-classic/favicon.ico  In my case I founded the head html tag in the file ~/mysites/andru255.github.io/themes/hugo-classic/layouts/partials/header.html, and I put above the tag title</description>
+    </item>
+    
+    <item>
+      <title>Handling Images</title>
+      <link>http://andru255.github.io/blog/posts/handling-images/</link>
+      <pubDate>Mon, 04 Sep 2017 19:14:21 -0500</pubDate>
+      
+      <guid>http://andru255.github.io/blog/posts/handling-images/</guid>
+      <description>In this post, I explain my style of work with images
+Understanding the folder content The folder content has all posts in .md extension, simply :)
+Implementation I create a post called handling-images:
+~ cd [my-site] ~ hugo new posts/handling-images  Then, I see my post in format .md, in this path [my-site]/content/posts/handling-images.md
+Awesome!, we need go to posts folder, and create for standard a folder with the same name of my post</description>
+    </item>
+    
+    <item>
+      <title>How Publish In Github</title>
+      <link>http://andru255.github.io/blog/posts/how-publish-in-github/</link>
+      <pubDate>Sat, 05 Aug 2017 12:30:02 -0500</pubDate>
+      
+      <guid>http://andru255.github.io/blog/posts/how-publish-in-github/</guid>
+      <description>Welcome again, I explain the how to publish this blog into github
+Understanding github pages Github pages  it&amp;rsquo;s amazing, exists many ways to create one, in my case I created a new repo into the github website, called andru255.github.io, because its the format to use [my-nickname].github.io
+Reading the instructions when its created a new repo, we testing clone and put a single html file previously:
+~ git clone https://github.</description>
+    </item>
+    
+    <item>
+      <title>Bienvenido</title>
+      <link>http://andru255.github.io/blog/posts/bienvenido/</link>
+      <pubDate>Sat, 05 Aug 2017 12:17:18 -0500</pubDate>
+      
+      <guid>http://andru255.github.io/blog/posts/bienvenido/</guid>
+      <description>Bienvenido a mi blog, explicaré sobre el cómo llegué a implementarlo
+Pre-requisitos  Git  v2.13.0 Una cuenta en github  Si no tienes una, que esperas! Hugo  v0.25.1  Actualmente uso una máquina en lubuntu 16.04
+Creando mi sitio web Como standard, voy a trabajar en el directorio /home/, y realizo los siguientes comandos:
+~ mkdir mysites ~ cd mysites ~ hugo new site [my-site]  [my-site] crea una carpeta con el nombre que le has puesto, en mi caso lo hice con el nombre andru255.</description>
+    </item>
+    
+    <item>
+      <title>Welcome</title>
+      <link>http://andru255.github.io/blog/posts/welcome/</link>
+      <pubDate>Sun, 30 Jul 2017 17:10:06 +0000</pubDate>
+      
+      <guid>http://andru255.github.io/blog/posts/welcome/</guid>
+      <description>Welcome to my blog, I explain how setup that site
+Pre-requisites  Git  v2.13.0 An github account  If you don&amp;rsquo;t have, make one! Hugo  v0.25.1  Currently I use a lubuntu v16.04 distro
+Setup a new site ~ mkdir mysites ~ cd mysites ~ hugo new site [my-site]  [my-site] creates a folder with this name, in my case I named andru255.github.io
+Adding a theme I use hugo-classic, so let&amp;rsquo;s start to install</description>
+    </item>
     
   </channel>
 </rss>

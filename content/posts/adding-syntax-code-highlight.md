@@ -1,7 +1,7 @@
 ---
 title: "Adding Syntax Code Highlight"
 date: 2017-10-21T23:41:37-05:00
-draft: true
+draft: false
 ---
 
 Hi, many of my tutorials needs to hightlight the instrucctions code or commands on markdown, starting and ending a block with _```_ create a block of code with the _highlighter_ plugin.

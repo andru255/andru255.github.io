@@ -3,7 +3,48 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://andru255.github.io/blog/posts/draft-content/</loc>
+    <lastmod>2017-11-01T19:49:06-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://andru255.github.io/blog/posts/adding-syntax-code-highlight/</loc>
+    <lastmod>2017-10-21T23:41:37-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://andru255.github.io/blog/posts/adding-favicon/</loc>
+    <lastmod>2017-10-14T13:29:40-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://andru255.github.io/blog/posts/handling-images/</loc>
+    <lastmod>2017-09-04T19:14:21-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://andru255.github.io/blog/posts/how-publish-in-github/</loc>
+    <lastmod>2017-08-05T12:30:02-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://andru255.github.io/blog/posts/bienvenido/</loc>
+    <lastmod>2017-08-05T12:17:18-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://andru255.github.io/blog/posts/welcome/</loc>
+    <lastmod>2017-07-30T17:10:06+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://andru255.github.io/blog/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://andru255.github.io/blog/posts/</loc>
+    <lastmod>2017-11-01T19:49:06-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -14,6 +55,7 @@
   
   <url>
     <loc>http://andru255.github.io/blog/</loc>
+    <lastmod>2017-11-01T19:49:06-05:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -1,7 +1,7 @@
 ---
 title: "Bienvenido"
 date: 2017-08-05T12:17:18-05:00
-draft: true
+draft: false
 ---
 
 Bienvenido a mi blog, explicaré sobre el cómo llegué a implementarlo

@@ -6,10 +6,21 @@
     <description>Recent content in Posts on andru255</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 21 Oct 2017 23:41:37 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 01 Nov 2017 19:49:06 -0500</lastBuildDate>
     
 	<atom:link href="http://andru255.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Draft Content</title>
+      <link>http://andru255.github.io/blog/posts/draft-content/</link>
+      <pubDate>Wed, 01 Nov 2017 19:49:06 -0500</pubDate>
+      
+      <guid>http://andru255.github.io/blog/posts/draft-content/</guid>
+      <description>Hi, in this post, I talk about draft value of every post, what&amp;rsquo;s that?
+Draft content CMSs like drupal, wordpress and gohugo shows a default state of every post, called draft.
+This type of content, is for pre-production reasons, for review, or approve for me, or for a group of people to release a good post or content. I think that&amp;rsquo;s a good practice for many reasons like you see.</description>
+    </item>
     
     <item>
       <title>Adding Syntax Code Highlight</title>
