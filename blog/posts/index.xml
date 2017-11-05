@@ -6,10 +6,21 @@
     <description>Recent content in Posts on andru255</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Nov 2017 19:49:06 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 04 Nov 2017 21:38:41 -0500</lastBuildDate>
     
 	<atom:link href="http://andru255.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Forking The Theme</title>
+      <link>http://andru255.github.io/blog/posts/forking-the-theme/</link>
+      <pubDate>Sat, 04 Nov 2017 21:38:41 -0500</pubDate>
+      
+      <guid>http://andru255.github.io/blog/posts/forking-the-theme/</guid>
+      <description>Hi!, In this post I will show you a great tip to mantain your personal theme, but, in my case I use the hugo-classic
+In many cases, I built some changes on it, and I want to customize more in the future, so I need to fork the original theme for my own maintenance.
+Find the origin and fork it I found the repo path with the following commands on my repo:</description>
+    </item>
     
     <item>
       <title>Draft Content</title>
