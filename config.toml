@@ -3,3 +3,6 @@ languageCode = "en-us"
 title = "andru255"
 theme = "hugo-classic"
 publishDir = "blog"
+
+[params]
+myVar = "cool :)"
