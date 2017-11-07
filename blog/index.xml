@@ -6,10 +6,21 @@
     <description>Recent content on andru255</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 04 Nov 2017 21:38:41 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 06 Nov 2017 23:25:39 -0500</lastBuildDate>
     
 	<atom:link href="http://andru255.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Understanding template variables</title>
+      <link>http://andru255.github.io/blog/posts/understanding-template-variables/</link>
+      <pubDate>Mon, 06 Nov 2017 23:25:39 -0500</pubDate>
+      
+      <guid>http://andru255.github.io/blog/posts/understanding-template-variables/</guid>
+      <description>Hi, in this post, I explain a one fundamentals part of theming for gohugo, it&amp;rsquo;s called variables.
+It&amp;rsquo;s very interesting to implement a variable in our theme, I show you examples into the themes/hugo-classic/layouts/_default/list.html file, currently has that content:
+{{ partial &amp;quot;header.html&amp;quot; . }} {{if not .IsHome }} &amp;lt;h1&amp;gt;{{ .Title }}&amp;lt;/h1&amp;gt; {{ end }} {{ .Content }} &amp;lt;ul&amp;gt; {{ range (where .Data.Pages &amp;quot;Section&amp;quot; &amp;quot;!=&amp;quot; &amp;quot;&amp;quot;) }} &amp;lt;li&amp;gt; &amp;lt;span class=&amp;quot;date&amp;quot;&amp;gt;{{ .</description>
+    </item>
     
     <item>
       <title>Forking The Theme</title>

@@ -3,3 +3,6 @@ languageCode = "en-us"
 title = "andru255"
 theme = "hugo-classic"
 publishDir = "blog"
+
+[Params]
+myWelcomeMessage="Welcome to my blog! :]"

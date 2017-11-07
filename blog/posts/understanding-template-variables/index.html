@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="/blog/favicon.ico" />
+    <title>Understanding template variables | andru255</title>
+    <link rel="stylesheet" href="/blog/css/style.css" />
+    <link rel="stylesheet" href="/blog/css/fonts.css" />
+    <header>
+
+  
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <nav>
+    <ul>
+      
+      
+      <li class="pull-left ">
+        <a href="http://andru255.github.io/blog">/home/andru255</a>
+      </li>
+      
+
+      
+
+    </ul>
+  </nav>
+</header>
+
+  </head>
+
+  <body>
+    <br/>
+
+<div class="article-meta">
+<h1><span class="title">Understanding template variables</span></h1>
+
+<h2 class="date">2017/11/06</h2>
+<p class="terms">
+  
+  
+  
+  
+  
+</p>
+</div>
+
+
+
+<main>
+
+
+<p>Hi, in this post, I explain a one fundamentals part of theming for gohugo,
+it&rsquo;s called <strong>variables</strong>.</p>
+
+<p>It&rsquo;s very interesting to implement a variable in our theme, I show you examples into the <code>themes/hugo-classic/layouts/_default/list.html</code> file, currently has that content:</p>
+
+<pre><code>{{ partial &quot;header.html&quot; . }}
+{{if not .IsHome }}
+&lt;h1&gt;{{ .Title }}&lt;/h1&gt;
+{{ end }}
+
+{{ .Content }}
+
+&lt;ul&gt;
+  {{ range (where .Data.Pages &quot;Section&quot; &quot;!=&quot; &quot;&quot;) }}
+  &lt;li&gt;
+    &lt;span class=&quot;date&quot;&gt;{{ .Date.Format &quot;2006/01/02&quot; }}&lt;/span&gt;
+    &lt;a href=&quot;{{ .URL }}&quot;&gt;{{ .Title }}&lt;/a&gt;
+  &lt;/li&gt;
+  {{ end }}
+&lt;/ul&gt;
+
+{{ partial &quot;footer.html&quot; . }}
+
+</code></pre>
+
+<p>And show my main list into my blog:</p>
+
+<p><img src="../understanding-template-variables/blog-list.png" alt="my blog list" /></p>
+
+<p>To print a variable needs to be between into one nested <strong>brackets</strong> like this:</p>
+
+<pre><code>{{ myWelcomeMessage }}
+</code></pre>
+
+<p>I put that variable above to <code>{{ .Content }}</code> with <strong>h2</strong> tag, start my local hugo server, refresh the url <code>http://localhost:3131/blog/</code>, and &hellip; nothing happens :&lsquo;(</p>
+
+<h3 id="what-s-wrong-where-i-define-my-custom-variables">What&rsquo;s wrong? where I define my custom variables?</h3>
+
+<p>There are many types of variables on hugo<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">1</a></sup>, but I see, it&rsquo;s usually to declaring a <strong>global</strong> variable is on <a href="http://gohugo.io/getting-started/configuration/">the configuration file</a>.</p>
+
+<p>On my case is located in <code>~/mysites/andru255.github.io/config.toml</code>, hands on, I&rsquo;m append these lines:</p>
+
+<pre><code>myWelcomeMessage=&quot;Welcome to andru255 blog! :]&quot;
+</code></pre>
+
+<p>But nothing happens again :&lsquo;/, following the docs again, I need to update my test file again replacing <code>{{ myWelcomeMessage }}</code> to <code>{{ .Site.Params.myWelcomeMessage }}</code>, and nothing again, but the key is closest.</p>
+
+<h3 id="one-step-more-why-site-params-mywelcomemessage">One step more, Why <code>.Site.Params.myWelcomeMessage</code>?</h3>
+
+<p>Reading forums, on our <strong>config.toml</strong> file we have a <strong>toml</strong> syntax, on that syntax, there is the term <strong>block</strong>, and the syntax for declare a <strong>block</strong> is like this:</p>
+
+<pre><code>[myblock]
+</code></pre>
+
+<p>The main file config must be have a <strong>block</strong> called <strong>Params</strong> for declare custom variables and makes those visible to all my site, awesome!, so:</p>
+
+<pre><code>[Params]
+myWelcomeMessage=&quot;Welcome to andru255 blog! :]&quot;
+</code></pre>
+
+<p>Refreshing again, we have our cool value visible.</p>
+
+<p><img src="../understanding-template-variables/my-new-welcome.png" alt="my blog list with my welcome message" /></p>
+
+<h2 id="more-about-variables">More about variables</h2>
+
+<p>I&rsquo;m applying a demo to use a single variable, but exists a toon of variable types to create a powerful site,If do you want to know more about that, please check the links below, I hope to talk more about <strong>variables</strong> in future posts.</p>
+
+<h3 id="notes">NOTES</h3>
+
+<p>You can see the code on <a href="https://github.com/andru255/hugo-classic/blob/master/layouts/_default/list.html"> the template file on my forked theme repo </a></p>
+
+<h3 id="credits-thanks-to">Credits / Thanks to:</h3>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:2"><a href="http://gohugo.io/variables/">Hugo  | Variables and Params</a>
+ <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+</main>
+
+    <footer>
+      
+<script async src="//yihui.name/js/center-img.js"></script>
+
+      
+    </footer>
+  </body>
+</html>
+
