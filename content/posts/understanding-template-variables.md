@@ -5,7 +5,7 @@ draft: false
 ---
 
 Hi, in this post, I explain a one fundamentals part of theming for gohugo, 
-it's called **variables**.
+it's called **variables**[^1].
 
 It's very interesting to implement a variable in our theme, I show you examples into the `themes/hugo-classic/layouts/_default/list.html` file, currently has that content:
 
@@ -53,7 +53,7 @@ myWelcomeMessage="Welcome to andru255 blog! :]"
 But nothing happens again :'/, following the docs again, I need to update my test file again replacing `{{ myWelcomeMessage }}` to `{{ .Site.Params.myWelcomeMessage }}`, and nothing again, but the key is closest.
 
 ### One step more, Why `.Site.Params.myWelcomeMessage`?
-Reading forums, on our **config.toml** file we have a **toml** syntax, on that syntax, there is the term **block**, and the syntax for declare a **block** is like this:
+Reading a forum [^3], on our **config.toml** file we have a **toml** syntax, on that syntax, there is the term **block**, and the syntax for declare a **block** is like this:
 
 ```
 [myblock]
@@ -81,3 +81,4 @@ You can see the code on [ the template file on my forked theme repo ](https://gi
 
 [^1]: [Hugo  | Introduction to Hugo Templating](http://gohugo.io/templates/introduction/#basic-syntax)
 [^2]: [Hugo  | Variables and Params](http://gohugo.io/variables/)
+[^3]: [Variables not pulled from config file - support - Hugo Discussion](https://discourse.gohugo.io/t/variables-not-pulled-from-config-file/1455/3)
