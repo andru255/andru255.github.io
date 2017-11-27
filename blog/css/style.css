@@ -1,8 +1,18 @@
 body {
+  background-color: #f1f1ee;
   max-width: 800px;
   margin: auto;
   padding: .2em;
   line-height: 1.5em;
+}
+
+.title {
+  color: #7982BA;
+  font-size: 2em;
+}
+
+.date {
+  color: #A9AFD9;
 }
 
 /* Table of Contents, if wanted

@@ -6,10 +6,20 @@
     <description>Recent content on andru255</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 06 Nov 2017 23:25:39 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 26 Nov 2017 22:37:52 -0500</lastBuildDate>
     
 	<atom:link href="http://andru255.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How To Play With Custom Fonts</title>
+      <link>http://andru255.github.io/blog/posts/how-to-play-with-custom-fonts/</link>
+      <pubDate>Sun, 26 Nov 2017 22:37:52 -0500</pubDate>
+      
+      <guid>http://andru255.github.io/blog/posts/how-to-play-with-custom-fonts/</guid>
+      <description>In this post, I show you how it works the custom fonts and how implement into a hugo theme, On my case I choose I use fontin sans for the body content &amp;lsquo;cause it&amp;rsquo;s really good and to see a serif font with smooth details, easy to read.
+And I use Blutter for the my the title, cause it&amp;rsquo;s good and original to apply a serif font to every title and makes a litle contrast with content.</description>
+    </item>
     
     <item>
       <title>Understanding template variables</title>

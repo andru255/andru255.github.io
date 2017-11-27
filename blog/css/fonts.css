@@ -1,7 +1,148 @@
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+@font-face {
+  font-family: 'butlerblack';
+  src: url('./fonts/butler_black-webfont.woff2') format('woff2'),
+       url('./fonts/butler_black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
 }
+
+
+
+
+@font-face {
+  font-family: 'butlerbold';
+  src: url('./fonts/butler_bold-webfont.woff2') format('woff2'),
+       url('./fonts/butler_bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'butlerextrabold';
+  src: url('./fonts/butler_extrabold-webfont.woff2') format('woff2'),
+       url('./fonts/butler_extrabold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'butlerlight';
+  src: url('./fonts/butler_light-webfont.woff2') format('woff2'),
+       url('./fonts/butler_light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'butlermedium';
+  src: url('./fonts/butler_medium-webfont.woff2') format('woff2'),
+       url('./fonts/butler_medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'butlerregular';
+  src: url('./fonts/butler_regular-webfont.woff2') format('woff2'),
+       url('./fonts/butler_regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'butlerultralight';
+  src: url('./fonts/butler_ultra_light-webfont.woff2') format('woff2'),
+       url('./fonts/butler_ultra_light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'fontin_sans_rgregular';
+  src: url('./fonts/fontin_sans_r_45b-webfont.woff2') format('woff2'),
+       url('./fonts/fontin_sans_r_45b-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'fontin_sans_rgbold_italic';
+  src: url('./fonts/fontin_sans_bi_45b-webfont.woff2') format('woff2'),
+       url('./fonts/fontin_sans_bi_45b-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'fontin_sansbold';
+  src: url('./fonts/fontin_sans_b_45b-webfont.woff2') format('woff2'),
+       url('./fonts/fontin_sans_b_45b-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'fontin_sans_rgitalic';
+  src: url('./fonts/fontin_sans_i_45b-webfont.woff2') format('woff2'),
+       url('./fonts/fontin_sans_i_45b-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'fontin_sanssmall_caps';
+  src: url('./fonts/fontin_sans_sc_45b-webfont.woff2') format('woff2'),
+       url('./fonts/fontin_sans_sc_45b-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+body {
+  font-family: 'fontin_sans_rgregular';
+}
+
+h2 {
+  font-size: 2em;
+}
+
 code {
   font-family: "Lucida Console", Monaco, monospace;
   font-size: 85%;
+}
+
+p {
+  font-size: 1.3em;
+}
+
+.title {
+  font-family: 'butlermedium';
+  font-size: 1.7em;
+  line-height: 1.4em;
 }
