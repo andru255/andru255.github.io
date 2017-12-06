@@ -17,11 +17,7 @@ Downloading [fontin sans](https://www.exljbris.com/fontinsans.html) we will see 
 
 I use a friendly tool to generate the required formats, it's called [Font Squirrel Generator](https://www.fontsquirrel.com/tools/webfont-generator), you only need upload the file with extension **.otf**, then, accept the **Agreement**, and finally for a litte time ago, automatically download the files mentioned before with a demo :)
 
-## NOTE:
-> The **Blutter font** contains already the required fonts.
-
 ## Putting on my theme
-
 The css file generated from my online tool, has the name `stylesheet.css`, we need copy all the content and paste at the top of the file `fonts.css`, that file is located in `~/mysites/andru255.github.io/themes/hugo-classic/static/css/` 
 
 And then font files downloaded with extension mentioned before, needs to be relocate into the path `~/mysites/andru255.github.io/themes/hugo-classic/static/css/fonts/`
@@ -55,10 +51,6 @@ because we have the font files into the folder **fonts**:
 
 And We need to update all the **src** properties who exists on the file.
 
-## NOTE:
-> The **Blutter font** has the same idea with a file called **stylesheet.css**, that file is located in
-> `Butler_and_ButlerStencil/Butler_Webfont` folder, follow the steps above and we have ready our changes
-
 ## Make things happen
 
 On the `font.css` file, we need to update the **body** rule:
@@ -84,8 +76,16 @@ Before submit my changes, I test before on localhost [following the steps of get
 
 As you see a litte UI changes, you can see more on my [theme repo](https://github.com/andru255/hugo-classic)
 
+## NOTES:
+> - The **Blutter font** contains already the required fonts.
+> - The **Blutter font** has the same idea with a file called **stylesheet.css**, that file is located in
+> `Butler_and_ButlerStencil/Butler_Webfont` folder, follow the steps above and we have ready our changes
+
 ### Credits / Thanks to:
 
 - [Best Practices Of Combining Typefaces — Smashing Magazine](https://www.smashingmagazine.com/2010/11/best-practices-of-combining-typefaces/)
 
 - [How To Choose A Font — A Step-By-Step Guide! — Smashing Magazine](https://www.smashingmagazine.com/2011/03/how-to-choose-a-typeface/)
+
+
+[^1]: [Can I use... Support tables for HTML5, CSS3, etc](https://caniuse.com/#search=woff)
