@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "andru255"
 theme = "hugo-classic"
 publishDir = "blog"
+GoogleAnalytics="UA-111667451-1"
 
 [Params]
 myWelcomeMessage="Welcome to my blog! :]"
