@@ -43,68 +43,898 @@ ga('send', 'pageview');
   <body>
     <br/>
 
+<main>
+    <div class="b-slide--main ">
+        <h1>Posts</h1>
+        
+    </div>
+    
+        <div class="b-slide ">
+            <h2>Adding a favicon</h2>
+            
 
+<p>Hi this is my custom favicon and I adding to my blog with some steps:</p>
 
-<h1>Posts</h1>
+<p><img src="../adding-favicon/favicon.png" alt="my favicon on png" /></p>
 
+<p>With the image on *<strong>.png</strong> extension, I process to the web to make my *<strong>.ico</strong> file: <a href="http://www.favicon.cc/">http://www.favicon.cc/</a></p>
 
-<h2>Welcome to my blog! :]</h2>
+<p>Then download the generated file *<strong>.ico</strong>, and copy my favicon into the folder:</p>
 
+<pre><code>~ cp ~/Downloads/favicon.ico ~/mysites/andru255.github.io/themes/hugo-classic/favicon.ico
+</code></pre>
 
+<p>In my case I founded the <strong>head</strong> html tag in the file  <strong>~/mysites/andru255.github.io/themes/hugo-classic/layouts/partials/header.html</strong>, and I put above the tag <strong>title</strong></p>
+
+<pre><code>&lt;link rel=&quot;shortcut icon&quot; type=&quot;image/x-icon&quot; href=&quot;{{ &quot;/favicon.ico&quot; | relURL }}&quot; /&gt;
+</code></pre>
+
+<p>With that code indicates to my browser <strong>My site has a custom favicon, please don&rsquo;t put your default browser favicon</strong>.</p>
+
+<p>Before submit my changes, I test before on localhost <a href="/blog/posts/welcome#a-live-site">following the steps of getting up a local hugo server</a></p>
+
+<p>Then, I need to build and submit my changes to my repo:</p>
+
+<pre><code>~ cd ~/my-sites/andru255.github.io/
+
+~ hugo -D
+
+~ git commit -am &quot;feat(updating-the-theme): my favicon is already&quot;
+</code></pre>
+
+<p>And must be show in a tab of your favorite browser like this:</p>
+
+<p><img src="../adding-favicon/tab-example.png" alt="tab-blog" /></p>
+
+<h3 id="credits-thanks-to">credits / Thanks to:</h3>
 
 <ul>
-  
-  <li>
-    <span class="date">2017/11/26</span>
-    <a href="/blog/posts/how-to-play-with-custom-fonts/">How To Play With Custom Fonts</a>
-  </li>
-  
-  <li>
-    <span class="date">2017/11/06</span>
-    <a href="/blog/posts/understanding-template-variables/">Understanding template variables</a>
-  </li>
-  
-  <li>
-    <span class="date">2017/11/04</span>
-    <a href="/blog/posts/forking-the-theme/">Forking The Theme</a>
-  </li>
-  
-  <li>
-    <span class="date">2017/11/01</span>
-    <a href="/blog/posts/draft-content/">Draft Content</a>
-  </li>
-  
-  <li>
-    <span class="date">2017/10/21</span>
-    <a href="/blog/posts/adding-syntax-code-highlight/">Adding Syntax Code Highlight</a>
-  </li>
-  
-  <li>
-    <span class="date">2017/10/14</span>
-    <a href="/blog/posts/adding-favicon/">Adding a favicon</a>
-  </li>
-  
-  <li>
-    <span class="date">2017/09/04</span>
-    <a href="/blog/posts/handling-images/">Handling Images</a>
-  </li>
-  
-  <li>
-    <span class="date">2017/08/05</span>
-    <a href="/blog/posts/how-publish-in-github/">How Publish In Github</a>
-  </li>
-  
-  <li>
-    <span class="date">2017/08/05</span>
-    <a href="/blog/posts/bienvenido/">Bienvenido</a>
-  </li>
-  
-  <li>
-    <span class="date">2017/07/30</span>
-    <a href="/blog/posts/welcome/">Welcome</a>
-  </li>
-  
+<li><a href="http://www.favicon.cc/">http://www.favicon.cc/</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Favicon">Favicon - Wikipedia</a></li>
 </ul>
+
+        </div>
+    
+        <div class="b-slide ">
+            <h2>Adding Syntax Code Highlight</h2>
+            
+
+<p>Hi, many of my tutorials needs to hightlight the instrucctions code or commands on markdown, starting and ending a block with <em>```</em> create a block of code with the <em>highlighter</em> plugin.</p>
+
+<p>For example, on my blog, when I writing with markdown code shows:</p>
+
+<p><img src="../adding-syntax-code-highlight/atom-one-light.png" alt="atom one light" /></p>
+
+<p>It&rsquo;s so simply, following this steps:</p>
+
+<p>In my case I founded a default highlight into the <strong>head</strong> html tag in the file  <strong>~/mysites/andru255.github.io/themes/hugo-classic/layouts/partials/head_custom.html</strong></p>
+
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css&quot;&gt;
+</code></pre>
+
+<p>And I remove that code with a great highlighter called <a href="https://draculatheme.com/highlightjs/">drakula</a>, following in the oficial page I put that code instead of <strong>atom-one-light</strong></p>
+
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css&quot;&gt;
+</code></pre>
+
+<p>Before submit my changes, I test before on localhost <a href="/blog/posts/welcome#a-live-site">following the steps of getting up a local hugo server</a></p>
+
+<p>Then, I need to build and submit my changes to my repo:</p>
+
+<pre><code>~ cd ~/my-sites/andru255.github.io/
+
+~ hugo -D
+
+~ git commit -am &quot;feat(updating-the-theme): dracula hightlight syntax code theme&quot;
+</code></pre>
+
+<p>And must be show in a tab of your favorite browser like this:</p>
+
+<p><img src="../adding-syntax-code-highlight/dracula.png" alt="dracula theme" /></p>
+
+<h3 id="credits-thanks-to">credits / Thanks to:</h3>
+
+<ul>
+<li><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code-and-syntax-highlighting">Markdown Cheatsheet - Code and Syntax Highlighting</a></li>
+<li><a href="https://highlightjs.org/">https://highlightjs.org/</a></li>
+<li><a href="https://draculatheme.com/highlightjs/">https://draculatheme.com/highlightjs/</a></li>
+</ul>
+
+        </div>
+    
+        <div class="b-slide ">
+            <h2>Bienvenido</h2>
+            
+
+<p>Bienvenido a mi blog, explicaré sobre el cómo llegué a implementarlo</p>
+
+<h2 id="pre-requisitos">Pre-requisitos</h2>
+
+<ul>
+<li><a href="https://git-scm.com/"> Git </a> v2.13.0</li>
+<li><a href="https://github.com"> Una cuenta en github </a> Si no tienes una, que esperas!</li>
+<li><a href="https://gohugo.io/"> Hugo </a> v0.25.1</li>
+</ul>
+
+<p>Actualmente uso una máquina en lubuntu 16.04</p>
+
+<h2 id="creando-mi-sitio-web">Creando mi sitio web</h2>
+
+<p>Como standard, voy a trabajar en el directorio <em>/home/</em>, y realizo los siguientes comandos:</p>
+
+<pre><code>~ mkdir mysites
+
+~ cd mysites
+
+~ hugo new site [my-site]
+
+</code></pre>
+
+<p><em>[my-site]</em> crea una carpeta con el nombre que le has puesto, en mi caso lo hice con el nombre andru255.github.io</p>
+
+<h2 id="agregando-un-skin">Agregando un skin</h2>
+
+<p>Uso <a href="https://github.com/goodroot/hugo-classic">hugo-classic</a>, y así lo instalé</p>
+
+<pre><code>~ cd [your-site]
+
+~ git init
+
+~ git submodule add https://github.com/goodroot/hugo-classic.git themes/hugo-classic 
+
+~ echo 'theme = &quot;hugo-classic&quot;' &gt;&gt; config.toml 
+</code></pre>
+
+<h2 id="creando-un-post-de-bienvenida">Creando un post de bienvenida</h2>
+
+<pre><code>~ hugo new posts/welcome.md
+
+~ echo &quot;# Hi, gracias hugo por crear mi blog :)&quot; &gt;&gt; posts/welcome.md
+</code></pre>
+
+<h2 id="está-vivo-está-vivo">Está vivo! está vivo!</h2>
+
+<p>Para ver nuestro blog en el navegador, ejecutamos el siguiente comando:</p>
+
+<pre><code>~ hugo server -D -v
+</code></pre>
+
+<p>Donde:</p>
+
+<ul>
+<li><em>-D</em>, inicia el proceso, y dicho proceso estará atento a todo cambio que realices</li>
+<li><em>-v</em>, Este parámetro te permite ver más detalladamente que hace dicho proceso</li>
+</ul>
+
+<p>Finalmente, para ver el sitio, abrimos un navegador e ingresamos a la dirección url: <a href="http://localhost:1313">http://localhost:1313</a></p>
+
+<h2 id="notas">NOTAS</h2>
+
+<p>Actualmente estoy desarrollando posts en <a href="../welcome">inglés</a> para un futuro manejo de i18n, por
+el momento explicaré de a pocos el poder de hugo para crear un blog :)</p>
+
+<h3 id="créditos-gracias-a">Créditos / gracias a:</h3>
+
+<ul>
+<li><a href="https://gohugo.io/getting-started/quick-start/">https://gohugo.io/getting-started/quick-start/</a></li>
+<li><a href="https://gohugo.io/getting-started/installing/">https://gohugo.io/getting-started/installing/</a></li>
+<li><a href="https://www.youtube.com/watch?v=3wkR8GyDODs">https://www.youtube.com/watch?v=3wkR8GyDODs</a></li>
+</ul>
+
+        </div>
+    
+        <div class="b-slide ">
+            <h2>Draft Content</h2>
+            
+
+<p>Hi, in this post, I talk about <strong>draft</strong> value of every post, what&rsquo;s that?</p>
+
+<p><img src="../draft-content/draft-front-matter.png" alt="draft content on front matter" /></p>
+
+<h2 id="draft-content">Draft content</h2>
+
+<p><a href="https://en.wikipedia.org/wiki/Content_management_system">CMS</a>s like drupal, wordpress and <strong>gohugo</strong> shows a
+default state of every post, called <strong>draft</strong>.</p>
+
+<p>This type of content, is for pre-production reasons, for review,
+or approve for me, or for a group of people to release a good post or content.
+I think that&rsquo;s a good practice for many reasons like you see.</p>
+
+<h2 id="handling-on-gohugo">Handling on gohugo</h2>
+
+<p>When create a post on terminal like a:</p>
+
+<pre><code>~ hugo new posts/my-new-great-article
+</code></pre>
+
+<p>Takes the file <strong>default.md</strong> as template, that file is from <strong>archetypes</strong> folder, and contains:</p>
+
+<pre><code>  ---
+  title: &quot;{{ replace .TranslationBaseName &quot;-&quot; &quot; &quot; | title }}&quot;
+  date: {{ .Date }}
+  draft: true
+  ---
+</code></pre>
+
+<p>As you see, this file contains some values at the top, these couple of values it&rsquo;s called too <a href="https://gohugo.io/content-management/front-matter/">Front Matter</a></p>
+
+<h2 id="how-to-view">How to view</h2>
+
+<p>By default every post has the value <strong>true</strong> in the <strong>draft</strong> property, I <a href="/blog/posts/welcome#a-live-site">following the steps of getting up a local hugo server</a></p>
+
+<h2 id="how-to-build">How to build</h2>
+
+<p>Using only:</p>
+
+<pre><code>~ hugo -D
+</code></pre>
+
+<p>Where:</p>
+
+<ul>
+<li><em>-D</em>, takes content marked as draft</li>
+</ul>
+
+<h2 id="the-good-practice">The good practice</h2>
+
+<p>When you really sure to publish your content, change the value <strong>false</strong> to <strong>true</strong> because the posts approved needs to be deployed and draft needs to be still waiting.</p>
+
+<p>It means, I need to update all my posts changing the <strong>draft</strong> value :) and deployment gets more easy with that command:</p>
+
+<pre><code>~ hugo
+</code></pre>
+
+<h3 id="notes">NOTES</h3>
+
+<p>Remember all commands explained in this post was executed
+into my folder <strong>~/mysites/andru255.github.io/</strong>, so take care about
+your blog path</p>
+
+<h3 id="credits-thanks-to">Credits / Thanks to:</h3>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Content_management_system">Content management system - Wikipedia</a></li>
+<li><a href="https://gohugo.io/content-management/front-matter/">Front Matter - Hugo</a></li>
+</ul>
+
+        </div>
+    
+        <div class="b-slide ">
+            <h2>Forking The Theme</h2>
+            
+
+<p>Hi!, In this post I will show you a great tip to mantain your personal theme,
+but, in my case I use the <a href="https://github.com/goodroot/hugo-classic">hugo-classic</a></p>
+
+<p>In many cases, I built some changes on it, and I want to customize more in the future,
+so I need to fork the original theme for my own maintenance.</p>
+
+<h2 id="find-the-origin-and-fork-it">Find the origin and fork it</h2>
+
+<p>I found the repo path with the following commands on my repo:</p>
+
+<pre><code>~ cd themes/hugo-classic
+~ git remote -v
+</code></pre>
+
+<p>When I executed the command <code>git remote -v</code> shows me:</p>
+
+<pre><code>origin	https://github.com/goodroot/hugo-classic.git (fetch)
+origin	https://github.com/goodroot/hugo-classic.git (push)
+</code></pre>
+
+<p>Nice!, I only copy and paste that URL to my favorite browser, and follow <a href="https://help.github.com/articles/fork-a-repo/">the github steps to forking a repo</a></p>
+
+<h2 id="setup-the-new-origin">Setup the new origin</h2>
+
+<p>Once forked, I changed the origin with these commands:</p>
+
+<pre><code>~ cd themes/hugo-classic
+~ git remote set-url origin https://github.com/andru255/hugo-classic.git
+</code></pre>
+
+<p>The last command tells to git, set the new origin with to my new URL append the <strong>.git</strong> suffix, for more information you can check git documentation.<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup></p>
+
+<p>Then, I prepare my changes and submit to my forked repo:</p>
+
+<pre><code>~ git add .
+~ git commit -am &quot;feat(theme): Customizing the favicon and code display&quot;
+~ git push origin master:master
+</code></pre>
+
+<h2 id="common-pitfalls">Common pitfalls</h2>
+
+<blockquote>
+<p>&ldquo;Help! Something happens when I upload my changes, git warns me that I need to pull from the remote repo&rdquo;</p>
+
+<pre><code>! [rejected]        master -&gt; master (fetch first)
+error: failed to push some refs to ...
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+</code></pre>
+</blockquote>
+
+<p>If you have problems like that, you have many solutions,
+go to terminal and hands on:</p>
+
+<h3 id="1st-solution-my-changes-are-the-only-one">1st solution - My changes are the only one</h3>
+
+<p>That solution force my local commits replace all the commits from my current forked repo</p>
+
+<pre><code>~ git push origin +master:master
+</code></pre>
+
+<h3 id="another-solution-my-changes-enhancements-for-the-original-repo">Another solution - My changes + enhancements for the original repo</h3>
+
+<p>That solution, it&rsquo;s recommended, but be careful:</p>
+
+<pre><code>~ git branch github_master origin/master
+~ git checkout github_master
+~ git pull origin master:github_master
+~ git checkout master
+~ git rebase -i github_master
+~ git push origin master:master
+</code></pre>
+
+<p>If <code>git rebase -i github_master</code> is new for You, no problem, may be needs to be learn more about that <sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup> <strong>it&rsquo;s really nice!</strong> or use instead <code>git merge github_master</code></p>
+
+<h2 id="updating-my-git-submodule">Updating my git submodule</h2>
+
+<p>I have in my <strong>.gitmodules</strong> file with this content:</p>
+
+<pre><code>[submodule &quot;themes/hugo-classic&quot;]
+	path = themes/hugo-classic
+	url = https://github.com/goodroot/hugo-classic.git
+</code></pre>
+
+<p>For update you need to follow this commands:</p>
+
+<pre><code>~ git submodule deinit themes/hugo-classic
+~ git rm themes/hugo-classic
+~ rm -fr .git/modules/themes/hugo-classic
+~ git submodule add https://github.com/andru255/hugo-classic.git themes/hugo-classic
+~ git commit -am &quot;chore(submodule): Updating the hugo-classic reference&quot;
+</code></pre>
+
+<p>Take care about these commands:</p>
+
+<ul>
+<li>First, It&rsquo;s not simply remove our current submodule on git.</li>
+<li>We need to deinitialize <sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">3</a></sup> our current submodule and remove</li>
+<li>Finally, adding again with our new submodule</li>
+</ul>
+
+<h3 id="notes">NOTES</h3>
+
+<p>Remember all commands explained in this post was executed
+into my folder <strong>~/mysites/andru255.github.io/</strong>, so take care about
+your blog path</p>
+
+<h3 id="credits-thanks-to">Credits / Thanks to:</h3>
+
+<ul>
+<li><a href="https://github.com/goodroot/hugo-classic">goodroot/hugo-classic: A simple and text-centric theme for Hugo.io</a></li>
+<li><a href="https://help.github.com/articles/fork-a-repo/">Fork A Repo - User Documentation</a></li>
+<li><a href="https://stackoverflow.com/a/35778105">Git submodule add: &ldquo;a git directory is found locally&rdquo; issue - Stack Overflow</a></li>
+<li><a href="https://stackoverflow.com/a/1260982">git - How do I remove a submodule? - Stack Overflow</a></li>
+<li><a href="https://www.atlassian.com/blog/git/git-submodules-workflows-tips">Git submodules: core concept, workflows, and tips - Atlassian Blog</a></li>
+</ul>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1"><a href="https://git-scm.com/docs/git-remote#git-remote-emset-urlem">Git - git-remote Documentation</a>
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:2"><a href="https://git-scm.com/docs/git-rebase#git-rebase--i">Git - git-rebase Documentation</a>
+ <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
+<li id="fn:3"><a href="https://git-scm.com/docs/git-submodule#git-submodule-deinit-f--force--all--ltpathgt82308203">Git - git-submodule Documentation</a>
+ <a class="footnote-return" href="#fnref:3"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+        </div>
+    
+        <div class="b-slide ">
+            <h2>Handling Images</h2>
+            
+
+<p>In this post, I explain my style of work with images</p>
+
+<h2 id="understanding-the-folder-content">Understanding the folder content</h2>
+
+<p>The folder <strong>content</strong> has all posts in <strong>.md</strong> extension, simply :)</p>
+
+<h2 id="implementation">Implementation</h2>
+
+<p>I create a post called <strong>handling-images</strong>:</p>
+
+<pre><code>~ cd [my-site]
+
+~ hugo new posts/handling-images
+
+</code></pre>
+
+<p>Then, I see my post in format .md, in this path <strong>[my-site]/content/posts/handling-images.md</strong></p>
+
+<p>Awesome!, we need go to <strong>posts</strong> folder, and create for standard a folder with the same name of my post</p>
+
+<pre><code>~ cd [my-site]/content/posts/
+
+~ mkdir handling-images
+
+</code></pre>
+
+<p>Nice, once created, we allow my image called <strong>awesome-bro.jpg</strong> in that folder, by commands or a finder.</p>
+
+<p>Then, I put this code into my file <strong>handling-images.md</strong>:</p>
+
+<pre><code>![cool](../handling-images/awesome-bro.jpg)
+</code></pre>
+
+<p><img src="../handling-images/awesome-bro.jpg" alt="cool" /></p>
+
+<p>Cool!, at the moment exists to link to some new website, no redimentions, title or some attribute directly on markdown:</p>
+
+<p>Putting this code into my file <strong>handling-images.md</strong>:</p>
+
+<pre><code>[![](../handling-images/github.png)](http://github.com/andru255)
+</code></pre>
+
+<p><a href="http://github.com/andru255"><img src="../handling-images/github.png" alt="" /></a></p>
+
+<h3 id="credits-thanks-to">Credits / Thanks to:</h3>
+
+<ul>
+<li><a href="https://pages.github.com/">https://pages.github.com/</a></li>
+<li><a href="https://meta.stackexchange.com/a/38917">https://meta.stackexchange.com/a/38917</a></li>
+<li><a href="https://github.com/gohugoio/hugo/issues/1014">https://github.com/gohugoio/hugo/issues/1014</a></li>
+<li><a href="https://gist.github.com/uupaa/f77d2bcf4dc7a294d109">https://gist.github.com/uupaa/f77d2bcf4dc7a294d109</a></li>
+</ul>
+
+        </div>
+    
+        <div class="b-slide ">
+            <h2>How Publish In Github</h2>
+            
+
+<p>Welcome again, I explain the how to publish this blog into github</p>
+
+<h2 id="understanding-github-pages">Understanding github pages</h2>
+
+<p><a href="https://pages.github.com/"> Github pages </a> it&rsquo;s amazing, exists many ways to create one, in my case
+I created a new repo into the github website, called <strong>andru255.github.io</strong>, because its the format to use <strong>[my-nickname].github.io</strong></p>
+
+<p><img src="../how-publish-in-github/creating-github-repo.gif" alt="New github repo" /></p>
+
+<p>Reading the instructions when its created a new repo, we testing clone and put a single html file previously:</p>
+
+<pre><code>~ git clone https://github.com/andru255/andru255.github.io ~/my-sites/test-my-github-blog
+
+~ cd ~/my-sites/test-my-github-blog
+
+~ echo &quot;This is my blog, A let's make it great :)&quot; &gt; index.html
+
+~ git add .
+
+~ git commit -am &quot;test index.html&quot;
+
+~ git push origin master
+
+</code></pre>
+
+<p>Then, We navigate to <a href="https://andru255.github.io/">https://andru255.github.io/</a></p>
+
+<p><strong>IMPORTANT :</strong> <a href="https://pages.github.com/"> Github pages </a> only shows static files in the browser like htmls, js, css, images, don&rsquo;t process a php, py, rb files</p>
+
+<h2 id="let-s-continue-with-hugo">Let&rsquo;s continue with hugo</h2>
+
+<p>We need to generate a static files, first we need to locate into [my-site]:</p>
+
+<pre><code>~ cd ~/my-sites/[my-site]
+</code></pre>
+
+<p>Then, we need to edit <strong>config.toml</strong> file, and I changed this param:</p>
+
+<pre><code>baseUrl=&quot;http://example.org&quot;
+</code></pre>
+
+<p>to</p>
+
+<pre><code>baseUrl=&quot;http://localhost:8000&quot;
+</code></pre>
+
+<p>And why this url?, we try to test in local, how it works the hugo static output. So we test with the follow commands:</p>
+
+<pre><code>~ hugo -D
+</code></pre>
+
+<p>Where:</p>
+
+<ul>
+<li><em>-D</em>, shows content marked as draft</li>
+</ul>
+
+<p>That command generates a <strong>public</strong> folder, on that folder exists the generated output ready to publish (html, css, js)</p>
+
+<p>So, we test with these commands:</p>
+
+<pre><code>~ cd public
+~ python -m SimpleHTTPServer 8000
+</code></pre>
+
+<p>the last command creates a single http server ( more about that, in credits section).</p>
+
+<p>Open in your browser: <a href="http://localhost:8000">http://localhost:8000</a></p>
+
+<p>And we can see our site alive! yay!</p>
+
+<h2 id="github-hugo">Github + Hugo</h2>
+
+<p>We understand the basic part of theirs, hands on:</p>
+
+<pre><code>~ cd ~/my-sites/[my-site]
+</code></pre>
+
+<p>Then, change mi baseUrl into <strong>config.toml</strong>:</p>
+
+<pre><code>baseUrl=&quot;http://example.org&quot;
+</code></pre>
+
+<p>to</p>
+
+<pre><code>baseUrl=&quot;https://andru255.github.io/blog&quot;
+</code></pre>
+
+<p>Then, generate the output</p>
+
+<pre><code>~ hugo -D
+</code></pre>
+
+<p>Great, I have output generated, sending to my github repo:</p>
+
+<pre><code>~ git add .
+
+~ git commit -am &quot;1st attempt: My blog ready&quot;
+
+~ git push origin master
+
+</code></pre>
+
+<h2 id="1st-attempt">1st attempt</h2>
+
+<p>Trying to submit my changes&hellip;</p>
+
+<p>Oh! a little trouble, I testing with my index.html (I don&rsquo;t explain here about git commands),
+in this escenario I forced my changes with this command:</p>
+
+<pre><code>~ git push origin +master:master
+</code></pre>
+
+<p>Good! &hellip; Visiting <a href="https://andru255.github.io/blog">https://andru255.github.io/blog</a></p>
+
+<p>Holy ..! I can see only a 404 :(</p>
+
+<h2 id="2nd-attempt">2nd attempt</h2>
+
+<p>Reading the <a href="https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#publishing-your-github-pages-site-from-a-docs-folder-on-your-master-branch"> github docs </a></p>
+
+<p>I generate the static output into a <strong>blog</strong> instead of <strong>public</strong> folder, I modify the <strong>config.toml</strong> files, adding this line:</p>
+
+<pre><code>publishDir = &quot;blog&quot;
+</code></pre>
+
+<p>Then, run again in console:</p>
+
+<pre><code>~ hugo -D
+</code></pre>
+
+<p>Great! If exists a new folder called <strong>blog</strong>, please remove the <strong>public</strong> folder for not confuse.</p>
+
+<p>Well done, submiting my changes:</p>
+
+<pre><code>~ git add .
+
+~ git commit -am &quot;2nd attempt: My blog with new output&quot; 
+
+~ git push origin master:master
+
+</code></pre>
+
+<h3 id="notes">NOTES</h3>
+
+<ul>
+<li>May be shows a warning like a empty repository when cloning that repo first time, but don&rsquo;t worry</li>
+<li>If we clone with https protocol, It&rsquo;s necessary puts our credentials when trying to push a change</li>
+<li>I changed the baseUrl path from <a href="https://andru255.github.io">https://andru255.github.io</a> to <a href="https://andru255.github.io/blog">https://andru255.github.io/blog</a> for github pages rules</li>
+</ul>
+
+<h3 id="credits-thanks-to">Credits / Thanks to:</h3>
+
+<ul>
+<li><a href="https://pages.github.com/">https://pages.github.com/</a></li>
+<li><a href="https://gohugo.io/getting-started/usage/">https://gohugo.io/getting-started/usage/</a></li>
+<li><a href="https://www.youtube.com/watch?v=3wkR8GyDODs">https://www.youtube.com/watch?v=3wkR8GyDODs</a></li>
+<li><a href="https://help.github.com/">https://help.github.com/</a></li>
+</ul>
+
+        </div>
+    
+        <div class="b-slide ">
+            <h2>How To Play With Custom Fonts</h2>
+            
+
+<p>In this post, I show you how it works the custom fonts and how implement into a hugo theme,
+On my case I choose I use <a href="https://www.exljbris.com/fontinsans.html">fontin sans</a> for the body content &lsquo;cause it&rsquo;s really good and to see a serif font with smooth details, easy to read.</p>
+
+<p>And I use <a href="https://www.behance.net/gallery/27753367/Butler-FREE-FONT-14-weights">Blutter</a> for the my the title, cause it&rsquo;s good and original to apply a serif font to every title and makes a litle contrast with content.</p>
+
+<h2 id="about-the-webfonts">About the webfonts</h2>
+
+<p>Downloading <a href="https://www.exljbris.com/fontinsans.html">fontin sans</a> we will see only files with extension <strong>.otf</strong>, but researching on the internet, I&rsquo;m not only need that files, it needs a files with <strong>.ttf</strong>, <strong>.woff</strong> and <strong>.woff2</strong> extension because it&rsquo;s a standard and more compatible with almost all browsers <sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>, <strong>.otf</strong> files it&rsquo;s only for IE browsers.</p>
+
+<h2 id="generating-the-required-format">Generating the required format</h2>
+
+<p>I use a friendly tool to generate the required formats, it&rsquo;s called <a href="https://www.fontsquirrel.com/tools/webfont-generator">Font Squirrel Generator</a>, you only need upload the file with extension <strong>.otf</strong>, then, accept the <strong>Agreement</strong>, and finally for a litte time ago, automatically download the files mentioned before with a demo :)</p>
+
+<h2 id="putting-on-my-theme">Putting on my theme</h2>
+
+<p>The css file generated from my online tool, has the name <code>stylesheet.css</code>, we need copy all the content and paste at the top of the file <code>fonts.css</code>, that file is located in <code>~/mysites/andru255.github.io/themes/hugo-classic/static/css/</code></p>
+
+<p>And then font files downloaded with extension mentioned before, needs to be relocate into the path <code>~/mysites/andru255.github.io/themes/hugo-classic/static/css/fonts/</code></p>
+
+<p>Finally, we need to update the <strong>src</strong> property for every rule into our <code>font.css</code> file, an example:</p>
+
+<pre><code class="language-css">@font-face {
+  font-family: 'fontin_sans_rgbold_italic';
+  src: url('fontin_sans_bi_45b-webfont.woff2') format('woff2'),
+       url('fontin_sans_bi_45b-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+</code></pre>
+
+<p>We need to update like this, the difference it&rsquo;s only on <strong>src</strong> property,
+because we have the font files into the folder <strong>fonts</strong>:</p>
+
+<pre><code class="language-css">@font-face {
+  font-family: 'fontin_sans_rgbold_italic';
+  src: url('./fonts/fontin_sans_bi_45b-webfont.woff2') format('woff2'),
+       url('./fonts/fontin_sans_bi_45b-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+</code></pre>
+
+<p>And We need to update all the <strong>src</strong> properties who exists on the file.</p>
+
+<h2 id="make-things-happen">Make things happen</h2>
+
+<p>On the <code>font.css</code> file, we need to update the <strong>body</strong> rule:</p>
+
+<pre><code class="language-css">body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+</code></pre>
+
+<p>to</p>
+
+<pre><code class="language-css">body {
+  font-family: 'fontin_sans_rgregular';
+}
+</code></pre>
+
+<p>Before submit my changes, I test before on localhost <a href="/blog/posts/welcome#a-live-site">following the steps of getting up a local hugo server</a></p>
+
+<h2 id="new-look-and-feel">New look and feel :)</h2>
+
+<p>As you see a litte UI changes, you can see more on my <a href="https://github.com/andru255/hugo-classic">theme repo</a></p>
+
+<h2 id="notes">NOTES:</h2>
+
+<blockquote>
+<ul>
+<li>The <strong>Blutter font</strong> contains already the required fonts.</li>
+<li>The <strong>Blutter font</strong> has the same idea with a file called <strong>stylesheet.css</strong>, that file is located in
+<code>Butler_and_ButlerStencil/Butler_Webfont</code> folder, follow the steps above and we have ready our changes</li>
+</ul>
+</blockquote>
+
+<h3 id="credits-thanks-to">Credits / Thanks to:</h3>
+
+<ul>
+<li><p><a href="https://www.smashingmagazine.com/2010/11/best-practices-of-combining-typefaces/">Best Practices Of Combining Typefaces — Smashing Magazine</a></p></li>
+
+<li><p><a href="https://www.smashingmagazine.com/2011/03/how-to-choose-a-typeface/">How To Choose A Font — A Step-By-Step Guide! — Smashing Magazine</a></p></li>
+</ul>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1"><a href="https://caniuse.com/#search=woff">Can I use&hellip; Support tables for HTML5, CSS3, etc</a>
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+        </div>
+    
+        <div class="b-slide ">
+            <h2>Understanding template variables</h2>
+            
+
+<p>Hi, in this post, I explain a one fundamentals part of theming for gohugo,
+it&rsquo;s called <strong>variables</strong><sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>.</p>
+
+<p>It&rsquo;s very interesting to implement a variable in our theme, I show you examples into the <code>themes/hugo-classic/layouts/_default/list.html</code> file, currently has that content:</p>
+
+<pre><code>{{ partial &quot;header.html&quot; . }}
+{{if not .IsHome }}
+&lt;h1&gt;{{ .Title }}&lt;/h1&gt;
+{{ end }}
+
+{{ .Content }}
+
+&lt;ul&gt;
+  {{ range (where .Data.Pages &quot;Section&quot; &quot;!=&quot; &quot;&quot;) }}
+  &lt;li&gt;
+    &lt;span class=&quot;date&quot;&gt;{{ .Date.Format &quot;2006/01/02&quot; }}&lt;/span&gt;
+    &lt;a href=&quot;{{ .URL }}&quot;&gt;{{ .Title }}&lt;/a&gt;
+  &lt;/li&gt;
+  {{ end }}
+&lt;/ul&gt;
+
+{{ partial &quot;footer.html&quot; . }}
+
+</code></pre>
+
+<p>And show my main list into my blog:</p>
+
+<p><img src="../understanding-template-variables/blog-list.png" alt="my blog list" /></p>
+
+<p>To print a variable needs to be between into one nested <strong>brackets</strong> like this:</p>
+
+<pre><code>{{ myWelcomeMessage }}
+</code></pre>
+
+<p>I put that variable above to <code>{{ .Content }}</code> with <strong>h2</strong> tag, start my local hugo server, refresh the url <code>http://localhost:3131/blog/</code>, and &hellip; nothing happens :&lsquo;(</p>
+
+<h3 id="what-s-wrong-where-i-define-my-custom-variables">What&rsquo;s wrong? where I define my custom variables?</h3>
+
+<p>There are many types of variables on hugo<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup>, but I see, it&rsquo;s usually to declaring a <strong>global</strong> variable is on <a href="http://gohugo.io/getting-started/configuration/">the configuration file</a>.</p>
+
+<p>On my case is located in <code>~/mysites/andru255.github.io/config.toml</code>, hands on, I&rsquo;m append these lines:</p>
+
+<pre><code>myWelcomeMessage=&quot;Welcome to andru255 blog! :]&quot;
+</code></pre>
+
+<p>But nothing happens again :&lsquo;/, following the docs again, I need to update my test file again replacing <code>{{ myWelcomeMessage }}</code> to <code>{{ .Site.Params.myWelcomeMessage }}</code>, and nothing again, but the key is closest.</p>
+
+<h3 id="one-step-more-why-site-params-mywelcomemessage">One step more, Why <code>.Site.Params.myWelcomeMessage</code>?</h3>
+
+<p>Reading a forum <sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">3</a></sup>, on our <strong>config.toml</strong> file we have a <strong>toml</strong> syntax, on that syntax, there is the term <strong>block</strong>, and the syntax for declare a <strong>block</strong> is like this:</p>
+
+<pre><code>[myblock]
+</code></pre>
+
+<p>The main file config must be have a <strong>block</strong> called <strong>Params</strong> for declare custom variables and makes those visible to all my site, awesome!, so:</p>
+
+<pre><code>[Params]
+myWelcomeMessage=&quot;Welcome to andru255 blog! :]&quot;
+</code></pre>
+
+<p>Refreshing again, we have our cool value visible.</p>
+
+<p><img src="../understanding-template-variables/my-new-welcome.png" alt="my blog list with my welcome message" /></p>
+
+<h2 id="more-about-variables">More about variables</h2>
+
+<p>I&rsquo;m applying a demo to use a single variable, but exists a toon of variable types to create a powerful site,If do you want to know more about that, please check the links below, I hope to talk more about <strong>variables</strong> in future posts.</p>
+
+<h3 id="notes">NOTES</h3>
+
+<p>You can see the code on <a href="https://github.com/andru255/hugo-classic/blob/master/layouts/_default/list.html"> the template file on my forked theme repo </a></p>
+
+<h3 id="credits-thanks-to">Credits / Thanks to:</h3>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1"><a href="http://gohugo.io/templates/introduction/#basic-syntax">Hugo  | Introduction to Hugo Templating</a>
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:2"><a href="http://gohugo.io/variables/">Hugo  | Variables and Params</a>
+ <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
+<li id="fn:3"><a href="https://discourse.gohugo.io/t/variables-not-pulled-from-config-file/1455/3">Variables not pulled from config file - support - Hugo Discussion</a>
+ <a class="footnote-return" href="#fnref:3"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+        </div>
+    
+        <div class="b-slide ">
+            <h2>Welcome</h2>
+            
+
+<p>Welcome to my blog, I explain how setup that site</p>
+
+<h2 id="pre-requisites">Pre-requisites</h2>
+
+<ul>
+<li><a href="https://git-scm.com/"> Git </a> v2.13.0</li>
+<li><a href="https://github.com"> An github account  </a> If you don&rsquo;t have, make one!</li>
+<li><a href="https://gohugo.io/"> Hugo </a> v0.25.1</li>
+</ul>
+
+<p>Currently I use a <a href="http://lubuntu.net/">lubuntu</a> v16.04 distro</p>
+
+<h2 id="setup-a-new-site">Setup a new site</h2>
+
+<pre><code>~ mkdir mysites
+
+~ cd mysites
+
+~ hugo new site [my-site]
+
+</code></pre>
+
+<p><em>[my-site]</em> creates a folder with this name, in my case I named andru255.github.io</p>
+
+<h2 id="adding-a-theme">Adding a theme</h2>
+
+<p>I use <a href="https://github.com/goodroot/hugo-classic">hugo-classic</a>, so let&rsquo;s start to install</p>
+
+<pre><code>~ cd [my-site]
+
+~ git init
+
+~ git submodule add https://github.com/goodroot/hugo-classic.git themes/hugo-classic 
+
+~ echo 'theme = &quot;hugo-classic&quot;' &gt;&gt; config.toml 
+</code></pre>
+
+<h2 id="creating-a-welcome-post">Creating a welcome post</h2>
+
+<pre><code>~ hugo new posts/welcome.md
+
+~ echo &quot;# Hi, welcome to my new blog :)&quot; &gt;&gt; posts/welcome.md
+</code></pre>
+
+<h2 id="a-live-site">A live site!</h2>
+
+<p>For start our live site in local</p>
+
+<pre><code>~ hugo server -D -v
+</code></pre>
+
+<p>Where:</p>
+
+<ul>
+<li><em>server</em>, start the daemon, and it&rsquo;s listen about new changes</li>
+<li><em>-D</em>, shows content marked as draft</li>
+<li><em>-v</em>, This parameter gives a detail info of our site when its start</li>
+</ul>
+
+<p>Finally, open your favorite browser and go to <a href="http://localhost:1313">http://localhost:1313</a></p>
+
+<p>If do you want to continue about how to publish into github, please open this <a href="../how-publish-in-github">link</a></p>
+
+<h3 id="credits-thanks-to">Credits / Thanks to:</h3>
+
+<ul>
+<li><a href="https://gohugo.io/getting-started/quick-start/">https://gohugo.io/getting-started/quick-start/</a></li>
+<li><a href="https://gohugo.io/getting-started/installing/">https://gohugo.io/getting-started/installing/</a></li>
+<li><a href="https://www.youtube.com/watch?v=3wkR8GyDODs">https://www.youtube.com/watch?v=3wkR8GyDODs</a></li>
+</ul>
+
+        </div>
+    
+</main>
 
     <footer>
       
@@ -114,4 +944,3 @@ ga('send', 'pageview');
     </footer>
   </body>
 </html>
-
