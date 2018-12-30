@@ -8,11 +8,23 @@ new_post:
 	docker-compose run --rm --user ${USER} hugocker hugo new posts/${name}.md
 
 # Para generar un nuevo post
+# make server_draft
+server_draft: 
+	docker-compose run --publish 1313:1313 --rm --user ${USER} hugocker hugo server -D --bind=0.0.0.0
+
+# Para generar un nuevo post
 # make server
 server: 
-	docker-compose run --publish 1313:1313 --rm --user ${USER} hugocker hugo server -D --bind=0.0.0.0
+	docker-compose run --publish 1313:1313 --rm --user ${USER} hugocker hugo server --bind=0.0.0.0
+
+# Para generar un nuevo post
+# make build_draft
+build_draft:
+	rm -fr blog
+	docker-compose run --rm --user ${USER} hugocker hugo -D -v
 
 # Para generar un nuevo post
 # make build
 build:
-	docker-compose run --rm --user ${USER} hugocker hugo -D -v
+	rm -fr blog
+	docker-compose run --rm --user ${USER} hugocker hugo -v

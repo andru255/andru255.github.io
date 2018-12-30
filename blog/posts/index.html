@@ -765,6 +765,148 @@ because we have the font files into the folder <strong>fonts</strong>:</p>
         </div>
     
         <div class="b-slide ">
+            <h2>Publica Tu Blog en Github</h2>
+            
+
+<p>En este post explicaré los pasos a tomar para publicar un blog en html a github</p>
+
+<h2 id="conociendo-github-pages">Conociendo Github pages</h2>
+
+<p><a href="https://pages.github.com/"> Github pages </a> es increíble para alojar tu blog, proyectos e incluso experimentos en html, en este caso, creo un nuevo repositorio por la página de github, y lo llamo <strong>andru255.github.io</strong>, porque es el formato que indica <strong>[my-nickname].github.io</strong></p>
+
+<p><img src="../how-publish-in-github/creating-github-repo.gif" alt="New github repo" /></p>
+
+<p>Seguimos las instrucciones que indica github una vez se haya creado nuestro repo, hacemos una prueba clonando y agregamos un archivo con extension <strong>.html</strong>:</p>
+
+<pre><code>~ git clone https://github.com/andru255/andru255.github.io ~/my-sites/test-my-github-blog
+
+~ cd ~/my-sites/test-my-github-blog
+
+~ echo &quot;Estrenando mi archivo en github pages, será genial! :)&quot; &gt; index.html
+
+~ git add .
+
+~ git commit -am &quot;mi archivo index.html&quot;
+
+~ git push origin master
+
+</code></pre>
+
+<p><img src="../how-publish-in-github/3doritos.jpg" alt="3 doritos después" /></p>
+
+<p>Esperamos unos minutos, y luego ingresamos a la URL <a href="https://andru255.github.io/">https://andru255.github.io/</a></p>
+
+<p><strong>OJO! :</strong> <a href="https://pages.github.com/"> Github pages </a> como mencioné anteriormente, sólo te permite visualizar archivos con extensión .html, .js, .css, e imágenes de formatos conodicos, <strong>NO INTERPRETA ARCHIVOS CON EXTENSIÓN  .php, .py, .rb, etc</strong>.</p>
+
+<h2 id="continúemos-con-nuestro-blog-en-gohugo">Continúemos con nuestro blog en goHugo</h2>
+
+<p>Necesitamos generar archivos con las extensiones permitidas (html, js, css), nos ubicamos a nuestra carpeta [my-site]:</p>
+
+<pre><code>~ cd ~/my-sites/[my-site]
+</code></pre>
+
+<p>Luego, Cambiamos el valor de la variable <strong>baseUrl</strong> en el archivo <strong>config.toml</strong>:</p>
+
+<pre><code>baseUrl=&quot;http://example.org&quot;
+</code></pre>
+
+<p>a</p>
+
+<pre><code>baseUrl=&quot;http://localhost:8000&quot;
+</code></pre>
+
+<p>Actualizamos a esa URL, porque necesitamos tener una visualización previa, ejecutamos este comando:</p>
+
+<pre><code>~ hugo -D
+</code></pre>
+
+<p>Donde:</p>
+
+<ul>
+<li><em>-D</em>, Incluímos contenido que está como borrador</li>
+</ul>
+
+<p>Este comando generará una carpeta de nombre <strong>public</strong>, donde erueka! está nuestro blog con archivos
+de extensión válida (html, css, js)</p>
+
+<p>Usamos una emulación de forma local, ejecutando en consola estos comandos:</p>
+
+<pre><code>~ cd public
+~ python -m SimpleHTTPServer 8000
+</code></pre>
+
+<p>Este último comando crea un servidor web en nuestro equipo (si deseas conocer más acerca de este comando, en la sección de créditos)</p>
+
+<p>Abrimos la URL: <a href="http://localhost:8000">http://localhost:8000</a></p>
+
+<p>Awesome!!</p>
+
+<h2 id="github-hugo">Github + Hugo</h2>
+
+<p>Ahora que conocemos de ambos lados, hacemos la combinación perfecta:</p>
+
+<pre><code>~ cd ~/my-sites/[my-site]
+</code></pre>
+
+<p>Cambiamos el valor de la variable <strong>baseUrl</strong> en el archivo <strong>config.toml</strong>:</p>
+
+<pre><code>baseUrl=&quot;http://example.org&quot;
+</code></pre>
+
+<p>to</p>
+
+<pre><code>baseUrl=&quot;https://andru255.github.io/blog&quot;
+</code></pre>
+
+<p>Generamos los archivos que necesitamos:</p>
+
+<pre><code>~ hugo -D
+</code></pre>
+
+<p>Genial!, Ahora viene lo bueno, lo subimos a nuestro repo de github:</p>
+
+<pre><code>~ git add .
+
+~ git commit -am &quot;1st attempt: My blog ready&quot;
+
+~ git push origin master
+
+</code></pre>
+
+<h2 id="alojando-en-una-ruta-personalizada">Alojando en una ruta personalizada</h2>
+
+<p>Si deseo visualizar mi blog en la URL <a href="https://andru255.github.io/blog">https://andru255.github.io/blog</a>,</p>
+
+<p>Actualizo la variable <strong>publishDir</strong> con el valor <strong>blog</strong>:</p>
+
+<pre><code>publishDir = &quot;blog&quot;
+</code></pre>
+
+<p>Se visualizará una nueva carpeta llamada <strong>blog</strong>, luego repito los pasos para generar mis archivos necesarios y el envío a mi repositorio.</p>
+
+<p>Remuevo la carpeta <strong>public</strong> generada anteriormente para evitar confusiones.</p>
+
+<h3 id="notes">NOTES</h3>
+
+<ul>
+<li>May be shows a warning like a empty repository when cloning that repo first time, but don&rsquo;t worry</li>
+<li>If we clone with https protocol, It&rsquo;s necessary puts our credentials when trying to push a change</li>
+<li>I changed the baseUrl path from <a href="https://andru255.github.io">https://andru255.github.io</a> to <a href="https://andru255.github.io/blog">https://andru255.github.io/blog</a> for github pages rules</li>
+</ul>
+
+<h3 id="credits-thanks-to">Credits / Thanks to:</h3>
+
+<ul>
+<li><a href="https://pages.github.com/">https://pages.github.com/</a></li>
+<li><a href="https://gohugo.io/getting-started/usage/">https://gohugo.io/getting-started/usage/</a></li>
+<li><a href="https://www.youtube.com/watch?v=3wkR8GyDODs">https://www.youtube.com/watch?v=3wkR8GyDODs</a></li>
+<li><a href="https://help.github.com/">https://help.github.com/</a>
+-<a href="https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#publishing-your-github-pages-site-from-a-docs-folder-on-your-master-branch">Configuring a publishing source for github pages</a></li>
+</ul>
+
+        </div>
+    
+        <div class="b-slide ">
             <h2>Understanding template variables</h2>
             
 
@@ -854,83 +996,6 @@ myWelcomeMessage=&quot;Welcome to andru255 blog! :]&quot;
  <a class="footnote-return" href="#fnref:3"><sup>[return]</sup></a></li>
 </ol>
 </div>
-
-        </div>
-    
-        <div class="b-slide ">
-            <h2>Welcome</h2>
-            
-
-<p>Welcome to my blog, I explain how setup that site</p>
-
-<h2 id="pre-requisites">Pre-requisites</h2>
-
-<ul>
-<li><a href="https://git-scm.com/"> Git </a> v2.13.0</li>
-<li><a href="https://github.com"> An github account  </a> If you don&rsquo;t have, make one!</li>
-<li><a href="https://gohugo.io/"> Hugo </a> v0.25.1</li>
-</ul>
-
-<p>Currently I use a <a href="http://lubuntu.net/">lubuntu</a> v16.04 distro</p>
-
-<h2 id="setup-a-new-site">Setup a new site</h2>
-
-<pre><code>~ mkdir mysites
-
-~ cd mysites
-
-~ hugo new site [my-site]
-
-</code></pre>
-
-<p><em>[my-site]</em> creates a folder with this name, in my case I named andru255.github.io</p>
-
-<h2 id="adding-a-theme">Adding a theme</h2>
-
-<p>I use <a href="https://github.com/goodroot/hugo-classic">hugo-classic</a>, so let&rsquo;s start to install</p>
-
-<pre><code>~ cd [my-site]
-
-~ git init
-
-~ git submodule add https://github.com/goodroot/hugo-classic.git themes/hugo-classic 
-
-~ echo 'theme = &quot;hugo-classic&quot;' &gt;&gt; config.toml 
-</code></pre>
-
-<h2 id="creating-a-welcome-post">Creating a welcome post</h2>
-
-<pre><code>~ hugo new posts/welcome.md
-
-~ echo &quot;# Hi, welcome to my new blog :)&quot; &gt;&gt; posts/welcome.md
-</code></pre>
-
-<h2 id="a-live-site">A live site!</h2>
-
-<p>For start our live site in local</p>
-
-<pre><code>~ hugo server -D -v
-</code></pre>
-
-<p>Where:</p>
-
-<ul>
-<li><em>server</em>, start the daemon, and it&rsquo;s listen about new changes</li>
-<li><em>-D</em>, shows content marked as draft</li>
-<li><em>-v</em>, This parameter gives a detail info of our site when its start</li>
-</ul>
-
-<p>Finally, open your favorite browser and go to <a href="http://localhost:1313">http://localhost:1313</a></p>
-
-<p>If do you want to continue about how to publish into github, please open this <a href="../how-publish-in-github">link</a></p>
-
-<h3 id="credits-thanks-to">Credits / Thanks to:</h3>
-
-<ul>
-<li><a href="https://gohugo.io/getting-started/quick-start/">https://gohugo.io/getting-started/quick-start/</a></li>
-<li><a href="https://gohugo.io/getting-started/installing/">https://gohugo.io/getting-started/installing/</a></li>
-<li><a href="https://www.youtube.com/watch?v=3wkR8GyDODs">https://www.youtube.com/watch?v=3wkR8GyDODs</a></li>
-</ul>
 
         </div>
     
