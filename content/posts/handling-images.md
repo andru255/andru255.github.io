@@ -1,7 +1,7 @@
 ---
 title: "Handling Images"
 date: 2017-09-04T19:14:21-05:00
-draft: false
+draft: true
 ---
 
 In this post, I explain my style of work with images
