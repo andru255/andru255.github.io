@@ -50,52 +50,6 @@ ga('send', 'pageview');
     </div>
     
         <div class="b-slide ">
-            <h2>Adding a favicon</h2>
-            
-
-<p>Hi this is my custom favicon and I adding to my blog with some steps:</p>
-
-<p><img src="../adding-favicon/favicon.png" alt="my favicon on png" /></p>
-
-<p>With the image on *<strong>.png</strong> extension, I process to the web to make my *<strong>.ico</strong> file: <a href="http://www.favicon.cc/">http://www.favicon.cc/</a></p>
-
-<p>Then download the generated file *<strong>.ico</strong>, and copy my favicon into the folder:</p>
-
-<pre><code>~ cp ~/Downloads/favicon.ico ~/mysites/andru255.github.io/themes/hugo-classic/favicon.ico
-</code></pre>
-
-<p>In my case I founded the <strong>head</strong> html tag in the file  <strong>~/mysites/andru255.github.io/themes/hugo-classic/layouts/partials/header.html</strong>, and I put above the tag <strong>title</strong></p>
-
-<pre><code>&lt;link rel=&quot;shortcut icon&quot; type=&quot;image/x-icon&quot; href=&quot;{{ &quot;/favicon.ico&quot; | relURL }}&quot; /&gt;
-</code></pre>
-
-<p>With that code indicates to my browser <strong>My site has a custom favicon, please don&rsquo;t put your default browser favicon</strong>.</p>
-
-<p>Before submit my changes, I test before on localhost <a href="/blog/posts/welcome#a-live-site">following the steps of getting up a local hugo server</a></p>
-
-<p>Then, I need to build and submit my changes to my repo:</p>
-
-<pre><code>~ cd ~/my-sites/andru255.github.io/
-
-~ hugo -D
-
-~ git commit -am &quot;feat(updating-the-theme): my favicon is already&quot;
-</code></pre>
-
-<p>And must be show in a tab of your favorite browser like this:</p>
-
-<p><img src="../adding-favicon/tab-example.png" alt="tab-blog" /></p>
-
-<h3 id="credits-thanks-to">credits / Thanks to:</h3>
-
-<ul>
-<li><a href="http://www.favicon.cc/">http://www.favicon.cc/</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Favicon">Favicon - Wikipedia</a></li>
-</ul>
-
-        </div>
-    
-        <div class="b-slide ">
             <h2>Adding Syntax Code Highlight</h2>
             
 
@@ -138,6 +92,125 @@ ga('send', 'pageview');
 <li><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code-and-syntax-highlighting">Markdown Cheatsheet - Code and Syntax Highlighting</a></li>
 <li><a href="https://highlightjs.org/">https://highlightjs.org/</a></li>
 <li><a href="https://draculatheme.com/highlightjs/">https://draculatheme.com/highlightjs/</a></li>
+</ul>
+
+        </div>
+    
+        <div class="b-slide ">
+            <h2>Agregando Favicon</h2>
+            
+
+<p>Hola, en este post mostraré el cómo agregar un favicon a tu blog bajo gohugo, en mi caso
+hice una imagen de 30x30.</p>
+
+<p><img src="../adding-favicon/favicon.png" alt="My favicon en formato png" /></p>
+
+<h2 id="cómo-generarlo">Cómo generarlo</h2>
+
+<p>Con esta imagen con formato <strong>png</strong>, lo procesé en esta web para pasarlo a formato <strong>ico</strong>:</p>
+
+<p><a href="http://www.favicon.cc/">http://www.favicon.cc/</a></p>
+
+<h2 id="cómo-agregarlo">Cómo agregarlo</h2>
+
+<p>Luego de seguir los pasos indicados en esa dirección, descargará el archivo que necesitamos y
+lo copio a esta ruta (tomando la carpeta de mi sitio):</p>
+
+<pre><code>~ cp ~/Downloads/favicon.ico ~/mysites/andru255.github.io/themes/hugo-classic/favicon.ico
+</code></pre>
+
+<h2 id="agregándolo-por-html">Agregándolo por HTML</h2>
+
+<p>Agregamos dentro  del tag <strong>head</strong> en el archivo  <strong>~/mysites/andru255.github.io/themes/hugo-classic/layouts/partials/header.html</strong>, justo antes del tag <strong>title</strong> lo siguiente:</p>
+
+<pre><code>&lt;link rel=&quot;shortcut icon&quot; type=&quot;image/x-icon&quot; href=&quot;{{ &quot;/favicon.ico&quot; | relURL }}&quot; /&gt;
+</code></pre>
+
+<p>Con esta declaración HTML indicamos al navegador que <strong>My sitio tiene su propio favicon, por favor no muestres tu favicon por defecto, gracias :)</strong></p>
+
+<p>Finalmente, <a href="/blog/posts/bienvenido#está-vivo-está-vivo">sigo los pasos de cómo visualizarlo en local</a>
+y <a href="/blog/posts/publica-tu-blog-en-github/#generación-del-sitio-y-envío-de-mis-cambios-github"> envío mis cambios </a></p>
+
+<h2 id="resultado-final">Resultado final</h2>
+
+<p>En mi caso sea en local o por github pages logro visualizarlo:</p>
+
+<p><img src="../adding-favicon/tab-example.png" alt="tab-blog" /></p>
+
+<h3 id="créditos-gracias-a">Créditos / Gracias a:</h3>
+
+<ul>
+<li><a href="http://www.favicon.cc/">http://www.favicon.cc/</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Favicon">Favicon - Wikipedia</a></li>
+</ul>
+
+        </div>
+    
+        <div class="b-slide ">
+            <h2>Agregando Imágenes en Gohugo</h2>
+            
+
+<p>En este post explicaré cómo agregar/quitar imágenes en el contenido de un post con gohugo</p>
+
+<h2 id="conociendo-el-folder-content">Conociendo el folder content</h2>
+
+<p>La carpeta <strong>content</strong> contiene todos los posts con extensión <strong>.md</strong>, y eso es todo :)</p>
+
+<h2 id="implementando-una-imagen">Implementando una imagen</h2>
+
+<p>Creamos una imagen llamada <strong>handling-images</strong>:</p>
+
+<pre><code>
+~ cd [my-site]
+
+~ hugo new posts/handling-images
+
+</code></pre>
+
+<p>Luego, ubico el archivo generado en la ruta correspondiente, por ejemplo a mi me generó en:</p>
+
+<pre><code>
+[my-site]/content/posts/handling-images.md
+
+</code></pre>
+
+<p>Ahora nos dirijimos a la carpeta <strong>posts</strong>, y creamos una carpeta con el nombre del post:</p>
+
+<pre><code>
+~ cd [my-site]/content/posts/
+
+~ mkdir handling-images
+
+</code></pre>
+
+<p>Agregamos a esa carpeta una imagen, en mi caso alojé una imagen de nombre <strong>awesome-bro.jpg</strong>, y finalmente
+agregamos esta línea en mi post o archivo <strong>handling-images.md</strong></p>
+
+<pre><code>
+![cool](../handling-images/awesome-bro.jpg)
+
+</code></pre>
+
+<p>y como resultado debe salir así:</p>
+
+<p><img src="../handling-images/awesome-bro.jpg" alt="cool" /></p>
+
+<p>Genial!, además podemos asociar un link a nuestra imagen de esta manera:</p>
+
+<pre><code>
+[![](../handling-images/github.png)](http://github.com/andru255)
+
+</code></pre>
+
+<p><a href="http://github.com/andru255"><img src="../handling-images/github.png" alt="" /></a></p>
+
+<h3 id="créditos-gracias-a">Créditos / Gracias a:</h3>
+
+<ul>
+<li><a href="https://pages.github.com/">https://pages.github.com/</a></li>
+<li><a href="https://meta.stackexchange.com/a/38917">https://meta.stackexchange.com/a/38917</a></li>
+<li><a href="https://github.com/gohugoio/hugo/issues/1014">https://github.com/gohugoio/hugo/issues/1014</a></li>
+<li><a href="https://gist.github.com/uupaa/f77d2bcf4dc7a294d109">https://gist.github.com/uupaa/f77d2bcf4dc7a294d109</a></li>
 </ul>
 
         </div>
@@ -220,6 +293,118 @@ el momento explicaré de a pocos el poder de hugo para crear un blog :)</p>
 <li><a href="https://gohugo.io/getting-started/installing/">https://gohugo.io/getting-started/installing/</a></li>
 <li><a href="https://www.youtube.com/watch?v=3wkR8GyDODs">https://www.youtube.com/watch?v=3wkR8GyDODs</a></li>
 </ul>
+
+        </div>
+    
+        <div class="b-slide ">
+            <h2>Cómo Usar Fuentes Personalizadas</h2>
+            
+
+<p>En este post, enseñaré cómo funcionan las fuentes personalizadas en el navegador y luego
+cómo implementarlo en un tema de hugo.</p>
+
+<p>En este caso elegí <a href="https://www.exljbris.com/fontinsans.html">fontin sans</a> para los párrafos y al
+ser un tipo serif en suaves detalles, fácil de leer.</p>
+
+<p>Además, usaré la fuente llamada <a href="https://www.behance.net/gallery/27753367/Butler-FREE-FONT-14-weights">Butler</a> para los títulos, porque lo veo muy elegante en las portadas.</p>
+
+<h2 id="qué-son-los-webfonts-y-para-qué-sirven">Qué son los webfonts y para qué sirven?</h2>
+
+<p>Son aquellas tipografías que no siempre están instaladas en tu equipo, y son visibles a través de un navegador.</p>
+
+<p>Descargando <a href="https://www.exljbris.com/fontinsans.html">fontin sans</a> ofrecerá la fuente con extensión <strong>.otf</strong>,
+pero para un soporte para todo navegador<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>, necesitamos archivos con extensión <strong>.ttf</strong>, <strong>.woff</strong> y <strong>.woff2</strong>,la extensión <strong>.otf</strong> solamente es pásabale para Internet Explorer 8 para atrás.</p>
+
+<h2 id="generando-mis-webfonts">Generando mis webfonts</h2>
+
+<p>Usando la herramienta amigable <a href="https://www.fontsquirrel.com/tools/webfont-generator">Font Squirrel Generator</a>,
+solamente necesitas subir el archivo de la tipografía con extensión <strong>.otf</strong>, luego aceptas los términos y
+condiciones, y finalmente envías el formulario.</p>
+
+<p>Si no se presentan errores, automáticamente se realizará la descarga de un archivo empaquetado incluyendo dentro
+de este una pequeña demo.</p>
+
+<h2 id="agregándolo-a-mi-tema-de-hugo">Agregándolo a mi tema de hugo</h2>
+
+<p>En el empaquetado también encontramos un archivo de nombre <code>stylesheet.css</code>, copiámos todo el contenido de
+este archivo y lo pegamos al inicio del archivo <code>fonts.css</code>, este último archivo está en <code>~/mysites/andru255.github.io/themes/hugo-classic/static/css/</code></p>
+
+<p>Luego los archivos con la extensión mencionada anteriormente, los muevo a <code>~/mysites/andru255.github.io/themes/hugo-classic/static/css/fonts/</code></p>
+
+<p>Finalmente, actualizo la propiedad <strong>src</strong> para toda regla en el archivo <code>font.css</code>, tomando este modelo:</p>
+
+<pre><code class="language-css">@font-face {
+  font-family: 'fontin_sans_rgbold_italic';
+  src: url('fontin_sans_bi_45b-webfont.woff2') format('woff2'),
+       url('fontin_sans_bi_45b-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+</code></pre>
+
+<p>El único cambio que debemos hacer en la propiedad <strong>src</strong>, es indicarle la nueva ruta de los archivos de tipografía:</p>
+
+<pre><code class="language-css">@font-face {
+  font-family: 'fontin_sans_rgbold_italic';
+  src: url('./fonts/fontin_sans_bi_45b-webfont.woff2') format('woff2'),
+       url('./fonts/fontin_sans_bi_45b-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+</code></pre>
+
+<p>Aplicamos a todas la coincidencias que encontremos en el archivo <code>font.css</code>.</p>
+
+<h2 id="visualizando-la-fuente-personalizada">Visualizando la fuente personalizada</h2>
+
+<p>En nuestro archivo <code>font.css</code>, actualizamos la regla <strong>body</strong> en la propiedad <strong>font-family</strong>:</p>
+
+<pre><code class="language-css">body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Avenir Next', Avenir, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+</code></pre>
+
+<p>a</p>
+
+<pre><code class="language-css">body {
+  font-family: 'fontin_sans_rgregular';
+}
+</code></pre>
+
+<p>Previo a enviar mis cambios, Lo verifico en mi equipo local <a href="/blog/posts/bienvenido#está-vivo-está-vivo">Siguiendo los pasos de cómo visualizarlo en local</a></p>
+
+<h2 id="un-nuevo-look-and-feel">Un nuevo look and feel :)</h2>
+
+<p>Este y otros cambios de estilos lo puedes encontrar en un fork que realicé del tema original <a href="https://github.com/andru255/hugo-classic">hugo-classic</a></p>
+
+<h2 id="notas">NOTAS:</h2>
+
+<blockquote>
+<ul>
+<li>La fuente <strong>Butler</strong> ya ofrece los archivos necesarios para implementarlo en la web.</li>
+<li>En el paquete que ofrece la fuente <strong>Butler</strong> contiene un archivo <strong>stylesheet.css</strong>, lo puedes encontrar en la carpeta
+<code>Butler_and_ButlerStencil/Butler_Webfont</code>, y sigues los pasos de cómo implementarlo en el tema.</li>
+</ul>
+</blockquote>
+
+<h3 id="créditos-gracias-a">Créditos / Gracias a:</h3>
+
+<ul>
+<li><p><a href="https://www.smashingmagazine.com/2010/11/best-practices-of-combining-typefaces/">Best Practices Of Combining Typefaces — Smashing Magazine</a></p></li>
+
+<li><p><a href="https://www.smashingmagazine.com/2011/03/how-to-choose-a-typeface/">How To Choose A Font — A Step-By-Step Guide! — Smashing Magazine</a></p></li>
+</ul>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1"><a href="https://caniuse.com/#search=woff">Can I use&hellip; Support tables for HTML5, CSS3, etc</a>
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+</ol>
+</div>
 
         </div>
     
@@ -439,238 +624,13 @@ your blog path</p>
         </div>
     
         <div class="b-slide ">
-            <h2>Handling Images</h2>
-            
-
-<p>In this post, I explain my style of work with images</p>
-
-<h2 id="understanding-the-folder-content">Understanding the folder content</h2>
-
-<p>The folder <strong>content</strong> has all posts in <strong>.md</strong> extension, simply :)</p>
-
-<h2 id="implementation">Implementation</h2>
-
-<p>I create a post called <strong>handling-images</strong>:</p>
-
-<pre><code>~ cd [my-site]
-
-~ hugo new posts/handling-images
-
-</code></pre>
-
-<p>Then, I see my post in format .md, in this path <strong>[my-site]/content/posts/handling-images.md</strong></p>
-
-<p>Awesome!, we need go to <strong>posts</strong> folder, and create for standard a folder with the same name of my post</p>
-
-<pre><code>~ cd [my-site]/content/posts/
-
-~ mkdir handling-images
-
-</code></pre>
-
-<p>Nice, once created, we allow my image called <strong>awesome-bro.jpg</strong> in that folder, by commands or a finder.</p>
-
-<p>Then, I put this code into my file <strong>handling-images.md</strong>:</p>
-
-<pre><code>![cool](../handling-images/awesome-bro.jpg)
-</code></pre>
-
-<p><img src="../handling-images/awesome-bro.jpg" alt="cool" /></p>
-
-<p>Cool!, at the moment exists to link to some new website, no redimentions, title or some attribute directly on markdown:</p>
-
-<p>Putting this code into my file <strong>handling-images.md</strong>:</p>
-
-<pre><code>[![](../handling-images/github.png)](http://github.com/andru255)
-</code></pre>
-
-<p><a href="http://github.com/andru255"><img src="../handling-images/github.png" alt="" /></a></p>
-
-<h3 id="credits-thanks-to">Credits / Thanks to:</h3>
-
-<ul>
-<li><a href="https://pages.github.com/">https://pages.github.com/</a></li>
-<li><a href="https://meta.stackexchange.com/a/38917">https://meta.stackexchange.com/a/38917</a></li>
-<li><a href="https://github.com/gohugoio/hugo/issues/1014">https://github.com/gohugoio/hugo/issues/1014</a></li>
-<li><a href="https://gist.github.com/uupaa/f77d2bcf4dc7a294d109">https://gist.github.com/uupaa/f77d2bcf4dc7a294d109</a></li>
-</ul>
-
-        </div>
-    
-        <div class="b-slide ">
-            <h2>How Publish In Github</h2>
-            
-
-<p>Welcome again, I explain the how to publish this blog into github</p>
-
-<h2 id="understanding-github-pages">Understanding github pages</h2>
-
-<p><a href="https://pages.github.com/"> Github pages </a> it&rsquo;s amazing, exists many ways to create one, in my case
-I created a new repo into the github website, called <strong>andru255.github.io</strong>, because its the format to use <strong>[my-nickname].github.io</strong></p>
-
-<p><img src="../how-publish-in-github/creating-github-repo.gif" alt="New github repo" /></p>
-
-<p>Reading the instructions when its created a new repo, we testing clone and put a single html file previously:</p>
-
-<pre><code>~ git clone https://github.com/andru255/andru255.github.io ~/my-sites/test-my-github-blog
-
-~ cd ~/my-sites/test-my-github-blog
-
-~ echo &quot;This is my blog, A let's make it great :)&quot; &gt; index.html
-
-~ git add .
-
-~ git commit -am &quot;test index.html&quot;
-
-~ git push origin master
-
-</code></pre>
-
-<p>Then, We navigate to <a href="https://andru255.github.io/">https://andru255.github.io/</a></p>
-
-<p><strong>IMPORTANT :</strong> <a href="https://pages.github.com/"> Github pages </a> only shows static files in the browser like htmls, js, css, images, don&rsquo;t process a php, py, rb files</p>
-
-<h2 id="let-s-continue-with-hugo">Let&rsquo;s continue with hugo</h2>
-
-<p>We need to generate a static files, first we need to locate into [my-site]:</p>
-
-<pre><code>~ cd ~/my-sites/[my-site]
-</code></pre>
-
-<p>Then, we need to edit <strong>config.toml</strong> file, and I changed this param:</p>
-
-<pre><code>baseUrl=&quot;http://example.org&quot;
-</code></pre>
-
-<p>to</p>
-
-<pre><code>baseUrl=&quot;http://localhost:8000&quot;
-</code></pre>
-
-<p>And why this url?, we try to test in local, how it works the hugo static output. So we test with the follow commands:</p>
-
-<pre><code>~ hugo -D
-</code></pre>
-
-<p>Where:</p>
-
-<ul>
-<li><em>-D</em>, shows content marked as draft</li>
-</ul>
-
-<p>That command generates a <strong>public</strong> folder, on that folder exists the generated output ready to publish (html, css, js)</p>
-
-<p>So, we test with these commands:</p>
-
-<pre><code>~ cd public
-~ python -m SimpleHTTPServer 8000
-</code></pre>
-
-<p>the last command creates a single http server ( more about that, in credits section).</p>
-
-<p>Open in your browser: <a href="http://localhost:8000">http://localhost:8000</a></p>
-
-<p>And we can see our site alive! yay!</p>
-
-<h2 id="github-hugo">Github + Hugo</h2>
-
-<p>We understand the basic part of theirs, hands on:</p>
-
-<pre><code>~ cd ~/my-sites/[my-site]
-</code></pre>
-
-<p>Then, change mi baseUrl into <strong>config.toml</strong>:</p>
-
-<pre><code>baseUrl=&quot;http://example.org&quot;
-</code></pre>
-
-<p>to</p>
-
-<pre><code>baseUrl=&quot;https://andru255.github.io/blog&quot;
-</code></pre>
-
-<p>Then, generate the output</p>
-
-<pre><code>~ hugo -D
-</code></pre>
-
-<p>Great, I have output generated, sending to my github repo:</p>
-
-<pre><code>~ git add .
-
-~ git commit -am &quot;1st attempt: My blog ready&quot;
-
-~ git push origin master
-
-</code></pre>
-
-<h2 id="1st-attempt">1st attempt</h2>
-
-<p>Trying to submit my changes&hellip;</p>
-
-<p>Oh! a little trouble, I testing with my index.html (I don&rsquo;t explain here about git commands),
-in this escenario I forced my changes with this command:</p>
-
-<pre><code>~ git push origin +master:master
-</code></pre>
-
-<p>Good! &hellip; Visiting <a href="https://andru255.github.io/blog">https://andru255.github.io/blog</a></p>
-
-<p>Holy ..! I can see only a 404 :(</p>
-
-<h2 id="2nd-attempt">2nd attempt</h2>
-
-<p>Reading the <a href="https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#publishing-your-github-pages-site-from-a-docs-folder-on-your-master-branch"> github docs </a></p>
-
-<p>I generate the static output into a <strong>blog</strong> instead of <strong>public</strong> folder, I modify the <strong>config.toml</strong> files, adding this line:</p>
-
-<pre><code>publishDir = &quot;blog&quot;
-</code></pre>
-
-<p>Then, run again in console:</p>
-
-<pre><code>~ hugo -D
-</code></pre>
-
-<p>Great! If exists a new folder called <strong>blog</strong>, please remove the <strong>public</strong> folder for not confuse.</p>
-
-<p>Well done, submiting my changes:</p>
-
-<pre><code>~ git add .
-
-~ git commit -am &quot;2nd attempt: My blog with new output&quot; 
-
-~ git push origin master:master
-
-</code></pre>
-
-<h3 id="notes">NOTES</h3>
-
-<ul>
-<li>May be shows a warning like a empty repository when cloning that repo first time, but don&rsquo;t worry</li>
-<li>If we clone with https protocol, It&rsquo;s necessary puts our credentials when trying to push a change</li>
-<li>I changed the baseUrl path from <a href="https://andru255.github.io">https://andru255.github.io</a> to <a href="https://andru255.github.io/blog">https://andru255.github.io/blog</a> for github pages rules</li>
-</ul>
-
-<h3 id="credits-thanks-to">Credits / Thanks to:</h3>
-
-<ul>
-<li><a href="https://pages.github.com/">https://pages.github.com/</a></li>
-<li><a href="https://gohugo.io/getting-started/usage/">https://gohugo.io/getting-started/usage/</a></li>
-<li><a href="https://www.youtube.com/watch?v=3wkR8GyDODs">https://www.youtube.com/watch?v=3wkR8GyDODs</a></li>
-<li><a href="https://help.github.com/">https://help.github.com/</a></li>
-</ul>
-
-        </div>
-    
-        <div class="b-slide ">
             <h2>How To Play With Custom Fonts</h2>
             
 
 <p>In this post, I show you how it works the custom fonts and how implement into a hugo theme,
 On my case I choose I use <a href="https://www.exljbris.com/fontinsans.html">fontin sans</a> for the body content &lsquo;cause it&rsquo;s really good and to see a serif font with smooth details, easy to read.</p>
 
-<p>And I use <a href="https://www.behance.net/gallery/27753367/Butler-FREE-FONT-14-weights">Blutter</a> for the my the title, cause it&rsquo;s good and original to apply a serif font to every title and makes a litle contrast with content.</p>
+<p>And I use <a href="https://www.behance.net/gallery/27753367/Butler-FREE-FONT-14-weights">Butler</a> for the my the title, cause it&rsquo;s good and original to apply a serif font to every title and makes a litle contrast with content.</p>
 
 <h2 id="about-the-webfonts">About the webfonts</h2>
 
@@ -772,7 +732,7 @@ because we have the font files into the folder <strong>fonts</strong>:</p>
 
 <h2 id="conociendo-github-pages">Conociendo Github pages</h2>
 
-<p><a href="https://pages.github.com/"> Github pages </a> es increíble para alojar tu blog, proyectos e incluso experimentos en html, en este caso, creo un nuevo repositorio por la página de github, y lo llamo <strong>andru255.github.io</strong>, porque es el formato que indica <strong>[my-nickname].github.io</strong></p>
+<p><a href="https://pages.github.com/"> Github pages </a> es increíble para alojar tu blog, proyectos e incluso experimentos en html, en este caso, creo un nuevo repositorio por la página de github, en mi caso <strong>andru255.github.io</strong> por el formato que es <strong>[my-nickname].github.io</strong></p>
 
 <p><img src="../how-publish-in-github/creating-github-repo.gif" alt="New github repo" /></p>
 
@@ -853,10 +813,12 @@ de extensión válida (html, css, js)</p>
 <pre><code>baseUrl=&quot;http://example.org&quot;
 </code></pre>
 
-<p>to</p>
+<p>a</p>
 
 <pre><code>baseUrl=&quot;https://andru255.github.io/blog&quot;
 </code></pre>
+
+<h2 id="generación-del-sitio-y-envío-de-mis-cambios-github">Generación del sitio y envío de mis cambios GitHub</h2>
 
 <p>Generamos los archivos que necesitamos:</p>
 
@@ -886,15 +848,13 @@ de extensión válida (html, css, js)</p>
 
 <p>Remuevo la carpeta <strong>public</strong> generada anteriormente para evitar confusiones.</p>
 
-<h3 id="notes">NOTES</h3>
+<h3 id="anotaciones">ANOTACIONES</h3>
 
 <ul>
-<li>May be shows a warning like a empty repository when cloning that repo first time, but don&rsquo;t worry</li>
-<li>If we clone with https protocol, It&rsquo;s necessary puts our credentials when trying to push a change</li>
-<li>I changed the baseUrl path from <a href="https://andru255.github.io">https://andru255.github.io</a> to <a href="https://andru255.github.io/blog">https://andru255.github.io/blog</a> for github pages rules</li>
+<li>Puede visualizarse una advertencia en github cuando un repo está vacío, pero no te preocupes es normal.</li>
 </ul>
 
-<h3 id="credits-thanks-to">Credits / Thanks to:</h3>
+<h3 id="créditos-gracias-a">Créditos / Gracias a:</h3>
 
 <ul>
 <li><a href="https://pages.github.com/">https://pages.github.com/</a></li>

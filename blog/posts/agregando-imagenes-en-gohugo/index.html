@@ -12,7 +12,7 @@ ga('send', 'pageview');
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="/blog/favicon.ico" />
-    <title>Handling Images | andru255</title>
+    <title>Agregando Imágenes en Gohugo | andru255</title>
     <link rel="stylesheet" href="/blog/css/style.css" />
     <link rel="stylesheet" href="/blog/css/fonts.css" />
     <header>
@@ -44,9 +44,9 @@ ga('send', 'pageview');
     <br/>
 
 <div class="article-meta">
-<h1><span class="title">Handling Images</span></h1>
+<h1><span class="title">Agregando Imágenes en Gohugo</span></h1>
 
-<h2 class="date">2017/09/04</h2>
+<h2 class="date">2019/01/01</h2>
 <p class="terms">
   
   
@@ -61,51 +61,61 @@ ga('send', 'pageview');
 <main>
 
 
-<p>In this post, I explain my style of work with images</p>
+<p>En este post explicaré cómo agregar/quitar imágenes en el contenido de un post con gohugo</p>
 
-<h2 id="understanding-the-folder-content">Understanding the folder content</h2>
+<h2 id="conociendo-el-folder-content">Conociendo el folder content</h2>
 
-<p>The folder <strong>content</strong> has all posts in <strong>.md</strong> extension, simply :)</p>
+<p>La carpeta <strong>content</strong> contiene todos los posts con extensión <strong>.md</strong>, y eso es todo :)</p>
 
-<h2 id="implementation">Implementation</h2>
+<h2 id="implementando-una-imagen">Implementando una imagen</h2>
 
-<p>I create a post called <strong>handling-images</strong>:</p>
+<p>Creamos una imagen llamada <strong>handling-images</strong>:</p>
 
-<pre><code>~ cd [my-site]
+<pre><code>
+~ cd [my-site]
 
 ~ hugo new posts/handling-images
 
 </code></pre>
 
-<p>Then, I see my post in format .md, in this path <strong>[my-site]/content/posts/handling-images.md</strong></p>
+<p>Luego, ubico el archivo generado en la ruta correspondiente, por ejemplo a mi me generó en:</p>
 
-<p>Awesome!, we need go to <strong>posts</strong> folder, and create for standard a folder with the same name of my post</p>
+<pre><code>
+[my-site]/content/posts/handling-images.md
 
-<pre><code>~ cd [my-site]/content/posts/
+</code></pre>
+
+<p>Ahora nos dirijimos a la carpeta <strong>posts</strong>, y creamos una carpeta con el nombre del post:</p>
+
+<pre><code>
+~ cd [my-site]/content/posts/
 
 ~ mkdir handling-images
 
 </code></pre>
 
-<p>Nice, once created, we allow my image called <strong>awesome-bro.jpg</strong> in that folder, by commands or a finder.</p>
+<p>Agregamos a esa carpeta una imagen, en mi caso alojé una imagen de nombre <strong>awesome-bro.jpg</strong>, y finalmente
+agregamos esta línea en mi post o archivo <strong>handling-images.md</strong></p>
 
-<p>Then, I put this code into my file <strong>handling-images.md</strong>:</p>
+<pre><code>
+![cool](../handling-images/awesome-bro.jpg)
 
-<pre><code>![cool](../handling-images/awesome-bro.jpg)
 </code></pre>
+
+<p>y como resultado debe salir así:</p>
 
 <p><img src="../handling-images/awesome-bro.jpg" alt="cool" /></p>
 
-<p>Cool!, at the moment exists to link to some new website, no redimentions, title or some attribute directly on markdown:</p>
+<p>Genial!, además podemos asociar un link a nuestra imagen de esta manera:</p>
 
-<p>Putting this code into my file <strong>handling-images.md</strong>:</p>
+<pre><code>
+[![](../handling-images/github.png)](http://github.com/andru255)
 
-<pre><code>[![](../handling-images/github.png)](http://github.com/andru255)
 </code></pre>
 
 <p><a href="http://github.com/andru255"><img src="../handling-images/github.png" alt="" /></a></p>
 
-<h3 id="credits-thanks-to">Credits / Thanks to:</h3>
+<h3 id="créditos-gracias-a">Créditos / Gracias a:</h3>
 
 <ul>
 <li><a href="https://pages.github.com/">https://pages.github.com/</a></li>

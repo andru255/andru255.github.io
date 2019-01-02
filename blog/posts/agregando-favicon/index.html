@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-111667451-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="/blog/favicon.ico" />
+    <title>Agregando Favicon | andru255</title>
+    <link rel="stylesheet" href="/blog/css/style.css" />
+    <link rel="stylesheet" href="/blog/css/fonts.css" />
+    <header>
+
+  
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <nav>
+    <ul>
+      
+      
+      <li class="pull-left ">
+        <a href="http://andru255.github.io/blog">/home/andru255</a>
+      </li>
+      
+
+      
+
+    </ul>
+  </nav>
+</header>
+
+  </head>
+
+  <body>
+    <br/>
+
+<div class="article-meta">
+<h1><span class="title">Agregando Favicon</span></h1>
+
+<h2 class="date">2019/01/02</h2>
+<p class="terms">
+  
+  
+  
+  
+  
+</p>
+</div>
+
+
+
+<main>
+
+
+<p>Hola, en este post mostraré el cómo agregar un favicon a tu blog bajo gohugo, en mi caso
+hice una imagen de 30x30.</p>
+
+<p><img src="../adding-favicon/favicon.png" alt="My favicon en formato png" /></p>
+
+<h2 id="cómo-generarlo">Cómo generarlo</h2>
+
+<p>Con esta imagen con formato <strong>png</strong>, lo procesé en esta web para pasarlo a formato <strong>ico</strong>:</p>
+
+<p><a href="http://www.favicon.cc/">http://www.favicon.cc/</a></p>
+
+<h2 id="cómo-agregarlo">Cómo agregarlo</h2>
+
+<p>Luego de seguir los pasos indicados en esa dirección, descargará el archivo que necesitamos y
+lo copio a esta ruta (tomando la carpeta de mi sitio):</p>
+
+<pre><code>~ cp ~/Downloads/favicon.ico ~/mysites/andru255.github.io/themes/hugo-classic/favicon.ico
+</code></pre>
+
+<h2 id="agregándolo-por-html">Agregándolo por HTML</h2>
+
+<p>Agregamos dentro  del tag <strong>head</strong> en el archivo  <strong>~/mysites/andru255.github.io/themes/hugo-classic/layouts/partials/header.html</strong>, justo antes del tag <strong>title</strong> lo siguiente:</p>
+
+<pre><code>&lt;link rel=&quot;shortcut icon&quot; type=&quot;image/x-icon&quot; href=&quot;{{ &quot;/favicon.ico&quot; | relURL }}&quot; /&gt;
+</code></pre>
+
+<p>Con esta declaración HTML indicamos al navegador que <strong>My sitio tiene su propio favicon, por favor no muestres tu favicon por defecto, gracias :)</strong></p>
+
+<p>Finalmente, <a href="/blog/posts/bienvenido#está-vivo-está-vivo">sigo los pasos de cómo visualizarlo en local</a>
+y <a href="/blog/posts/publica-tu-blog-en-github/#generación-del-sitio-y-envío-de-mis-cambios-github"> envío mis cambios </a></p>
+
+<h2 id="resultado-final">Resultado final</h2>
+
+<p>En mi caso sea en local o por github pages logro visualizarlo:</p>
+
+<p><img src="../adding-favicon/tab-example.png" alt="tab-blog" /></p>
+
+<h3 id="créditos-gracias-a">Créditos / Gracias a:</h3>
+
+<ul>
+<li><a href="http://www.favicon.cc/">http://www.favicon.cc/</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Favicon">Favicon - Wikipedia</a></li>
+</ul>
+
+</main>
+
+    <footer>
+      
+<script async src="//yihui.name/js/center-img.js"></script>
+
+      
+    </footer>
+  </body>
+</html>
+

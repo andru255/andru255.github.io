@@ -101,6 +101,8 @@ a
 baseUrl="https://andru255.github.io/blog"
 ```
 
+## Generación del sitio y envío de mis cambios GitHub
+
 Generamos los archivos que necesitamos:
 
 ```
