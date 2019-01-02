@@ -7,7 +7,7 @@ draft: false
 In this post, I show you how it works the custom fonts and how implement into a hugo theme,
 On my case I choose I use [fontin sans](https://www.exljbris.com/fontinsans.html) for the body content 'cause it's really good and to see a serif font with smooth details, easy to read.
 
-And I use [Blutter](https://www.behance.net/gallery/27753367/Butler-FREE-FONT-14-weights) for the my the title, cause it's good and original to apply a serif font to every title and makes a litle contrast with content.
+And I use [Butler](https://www.behance.net/gallery/27753367/Butler-FREE-FONT-14-weights) for the my the title, cause it's good and original to apply a serif font to every title and makes a litle contrast with content.
 
 ## About the webfonts
 
