@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-111667451-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="/blog/favicon.ico" />
+    <title>Como Agregar Syntax Code Highlight | andru255</title>
+    <link rel="stylesheet" href="/blog/css/style.css" />
+    <link rel="stylesheet" href="/blog/css/fonts.css" />
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+  </head>
+  <body>
+    <header>
+
+  
+
+  <nav>
+    <ul>
+      
+      
+      <li class="pull-left ">
+        <a href="http://andru255.github.io/blog">/home/andru255</a>
+      </li>
+      
+
+      
+
+    </ul>
+  </nav>
+</header>
+
+
+<div class="article-meta">
+<h1><span class="title">Como Agregar Syntax Code Highlight</span></h1>
+
+<h2 class="date">2019/01/06</h2>
+<p class="terms">
+  
+  
+  
+  
+  
+</p>
+</div>
+
+
+
+<main>
+
+
+<p>Hola, en este tutorial enseñaré a cómo agregar un estilo de resaltar texto dándo
+el aspecto de código.</p>
+
+<p><img src="../adding-syntax-code-highlight/atom-one-light.png" alt="atom one light" /></p>
+
+<h2 id="uso-de-la-librería-base">Uso de la librería base</h2>
+
+<p>Edito el archivo <code>~/mysites/andru255.github.io/themes/hugo-classic/layouts/partials/header.html</code> agregando lo siguiente en la etiqueta <strong>head</strong>:</p>
+
+<pre><code>    &lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;
+</code></pre>
+
+<h2 id="agregando-el-estilo-al-html">Agregando el estilo al html</h2>
+
+<p>Edito el archivo <code>~/mysites/andru255.github.io/themes/hugo-classic/layouts/partials/header.html</code> y preferible antes de la librería base agrego:</p>
+
+<p>En este caso estoy indicando que voy a iniciar con el estilo <a href="https://draculatheme.com/highlightjs/">dracula</a></p>
+
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css&quot;&gt;
+</code></pre>
+
+<p>Se recomienda usar un estilo, en caso haya otro estilo previo debe removerse quitando solo la etiqueta <strong>link</strong></p>
+
+<h2 id="código-final">Código final</h2>
+
+<p>En conclusión, siguiendo los pasos anteriores debe quedar así:</p>
+
+<pre><code>    &lt;link rel=&quot;stylesheet&quot; href=&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css&quot;&gt;
+    &lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;
+</code></pre>
+
+<h2 id="construccion-y-envío-a-github-pages">Construccion y envío a github pages</h2>
+
+<p>Si deseas visualizarlo en local <a href="/blog/posts/bienvenido#está-vivo-está-vivo">sigue los pasos de cómo visualizarlo en local</a>
+y <a href="/blog/posts/publica-tu-blog-en-github/#generación-del-sitio-y-envío-de-mis-cambios-github"> envío mis cambios </a></p>
+
+<p>El resultado debe ser así:</p>
+
+<p><img src="../adding-syntax-code-highlight/dracula.png" alt="dracula theme" /></p>
+
+<h3 id="créditos-gracias-a">Créditos / Gracias a:</h3>
+
+<ul>
+<li><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code-and-syntax-highlighting">Markdown Cheatsheet - Code and Syntax Highlighting</a></li>
+<li><a href="https://highlightjs.org/">https://highlightjs.org/</a></li>
+<li><a href="https://draculatheme.com/highlightjs/">https://draculatheme.com/highlightjs/</a></li>
+</ul>
+
+</main>
+
+    <footer>
+      
+<script async src="//yihui.name/js/center-img.js"></script>
+
+      
+    </footer>
+  </body>
+</html>
+

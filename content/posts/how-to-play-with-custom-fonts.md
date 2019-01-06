@@ -1,7 +1,7 @@
 ---
 title: "How To Play With Custom Fonts"
 date: 2017-11-26T22:37:52-05:00
-draft: false
+draft: true
 ---
 
 In this post, I show you how it works the custom fonts and how implement into a hugo theme,

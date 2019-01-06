@@ -37,6 +37,9 @@ Agregamos dentro  del tag **head** en el archivo  **~/mysites/andru255.github.io
 
 Con esta declaración HTML indicamos al navegador que **My sitio tiene su propio favicon, por favor no muestres tu favicon por defecto, gracias :)**
 
+
+## Construccion y envío a github pages
+
 Finalmente, [sigo los pasos de cómo visualizarlo en local](/blog/posts/bienvenido#está-vivo-está-vivo)
 y [ envío mis cambios ](/blog/posts/publica-tu-blog-en-github/#generación-del-sitio-y-envío-de-mis-cambios-github)
 
