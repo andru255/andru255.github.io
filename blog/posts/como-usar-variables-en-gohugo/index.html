@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-111667451-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="/blog/favicon.ico" />
+    <title>Cómo usar variables en goHugo | andru255</title>
+    <link rel="stylesheet" href="/blog/css/style.css" />
+    <link rel="stylesheet" href="/blog/css/fonts.css" />
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+  </head>
+  <body>
+    <header>
+
+  
+
+  <nav>
+    <ul>
+      
+      
+      <li class="pull-left ">
+        <a href="http://andru255.github.io/blog">/home/andru255</a>
+      </li>
+      
+
+      
+
+    </ul>
+  </nav>
+</header>
+
+
+<div class="article-meta">
+<h1><span class="title">Cómo usar variables en goHugo</span></h1>
+
+<h2 class="date">2019/01/06</h2>
+<p class="terms">
+  
+  
+  
+  
+  
+</p>
+</div>
+
+
+
+<main>
+
+
+<p>Hola, en este post mostraré una de las piezas fundamentales de gohugo, el qué son y para que son
+tan útiles en nuestro blog, y se llaman <strong>variables</strong><sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>.</p>
+
+<h2 id="qué-son-las-variables">Qué son las variables</h2>
+
+<p>Son aquellas palabras especiales que trae gohugo y contienen valores como la fecha,
+la info de un post o articulo, etc.</p>
+
+<p>Existen muchos valores que ofrece hugo para que aplique en tu tema o directo en el blog, y puedes visualizarlo
+<a href="https://gohugo.io/variables/"> aquí </a></p>
+
+<h2 id="variables-nativas">Variables nativas</h2>
+
+<p>En el tema que estoy usando, en el archivo <code>themes/hugo-classic/layouts/_default/header.html</code>, visualizamos:</p>
+
+<pre><code>
+&lt;title&gt;{{ .Title }} | {{ .Site.Title }}&lt;/title&gt;
+
+</code></pre>
+
+<p>La variable nativa <code>.Title</code> contiene el valor del título de cada articulo, y para</p>
+
+<p>visualizar el valor que contiene lo realizo ejecutando los comandos para <a href="/blog/posts/bienvenido#está-vivo-está-vivo">visualizar mi web en local</a></p>
+
+<p>o <a href="/blog/posts/publica-tu-blog-en-github/#generación-del-sitio-y-envío-de-mis-cambios-github">generando los archivos correspondientes</a></p>
+
+<h2 id="variables-personalizadas">Variables personalizadas</h2>
+
+<p>Si deseas crear una variable, debes definirlo en el archivo <code>config.toml</code></p>
+
+<h3 id="cómo-creo-una-variable">Cómo creo una variable</h3>
+
+<p>Voy a crear la variable <code>myWelcomeMessage</code> donde contenga el valor <code>Bienvenido a mi blog! :)</code>,
+entonces actualizo el archivo mencionado con esta sintaxis:</p>
+
+<pre><code>
+[Params]
+myWelcomeMessage=&quot;Bienvenido a mi blog! :)&quot;
+
+</code></pre>
+
+<p>donde visualizamos además en la línea superior el texto <code>[Params]</code><sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup> con esto indicamos a hugo
+que tenemos uno o un grupo de variables que vamos a utilizar en nuestro sitio.</p>
+
+<h3 id="dónde-imprimo-la-variable">Dónde imprimo la variable</h3>
+
+<p>En mi caso deseo visualizarlo en la vista de inicio del blog, entonces edito el archivo del theme que estoy usando <code>themes/hugo-classic/layouts/_default/list.html</code> :</p>
+
+<pre><code>
+&lt;h2&gt;{{ .Site.Params.myWelcomeMessage }}&lt;/h2&gt;
+
+</code></pre>
+
+<h2 id="visualización-y-envío-de-cambios">Visualización y envío de cambios</h2>
+
+<p>Realizo los comandos para <a href="/blog/posts/bienvenido#está-vivo-está-vivo">visualizarlo en local</a> o <a href="/blog/posts/publica-tu-blog-en-github/#generación-del-sitio-y-envío-de-mis-cambios-github">generación y publicación de archivos</a></p>
+
+<h2 id="resultado-del-tutorial">Resultado del tutorial</h2>
+
+<p><img src="../understanding-template-variables/variables-hugo-example.png" alt="params-example" /></p>
+
+<h3 id="créditos-gracias-a">Créditos / Gracias a:</h3>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1"><a href="http://gohugo.io/templates/introduction/#basic-syntax">Hugo  | Introduction to Hugo Templating</a>
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:2"><a href="https://discourse.gohugo.io/t/variables-not-pulled-from-config-file/1455/3">Variables not pulled from config file - support - Hugo Discussion</a>
+ <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+</main>
+
+    <footer>
+      
+<script async src="//yihui.name/js/center-img.js"></script>
+
+      
+    </footer>
+  </body>
+</html>
+

@@ -1,7 +1,7 @@
 ---
 title: "Understanding template variables"
 date: 2017-11-06T23:25:39-05:00
-draft: false
+draft: true
 ---
 
 Hi, in this post, I explain a one fundamentals part of theming for gohugo, 
@@ -31,7 +31,7 @@ It's very interesting to implement a variable in our theme, I show you examples 
 ```
 And show my main list into my blog:
 
-![my blog list](../understanding-template-variables/blog-list.png)
+![my blog list](../understanding-template-variables/variables-blog-list.png)
 
 To print a variable needs to be between into one nested **brackets** like this:
 
