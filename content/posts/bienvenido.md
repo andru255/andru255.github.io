@@ -61,15 +61,10 @@ Para ver nuestro blog en el navegador, ejecutamos el siguiente comando:
 
 Donde:
 
-- *-D*, inicia el proceso, y dicho proceso estará atento a todo cambio que realices
+- *-D*, Incluye articulos en estado [draft](/blog/posts/que-es-draft-content/)
 - *-v*, Este parámetro te permite ver más detalladamente que hace dicho proceso
 
 Finalmente, para ver el sitio, abrimos un navegador e ingresamos a la dirección url: http://localhost:1313
-
-## NOTAS
-
-Actualmente estoy desarrollando posts en [inglés](../welcome) para un futuro manejo de i18n, por 
-el momento explicaré de a pocos el poder de hugo para crear un blog :)
 
 ### Créditos / gracias a:
 

@@ -1,7 +1,7 @@
 ---
 title: "Draft Content"
 date: 2017-11-01T19:49:06-05:00
-draft: false
+draft: true
 ---
 
 Hi, in this post, I talk about **draft** value of every post, what's that?

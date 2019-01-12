@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-111667451-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="/blog/favicon.ico" />
+    <title>Qué es draft content | andru255</title>
+    <link rel="stylesheet" href="/blog/css/style.css" />
+    <link rel="stylesheet" href="/blog/css/fonts.css" />
+    <header>
+
+  
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <nav>
+    <ul>
+      
+      
+      <li class="pull-left ">
+        <a href="http://andru255.github.io/blog">/home/andru255</a>
+      </li>
+      
+
+      
+
+    </ul>
+  </nav>
+</header>
+
+  </head>
+
+  <body>
+    <br/>
+
+<div class="article-meta">
+<h1><span class="title">Qué es draft content</span></h1>
+
+<h2 class="date">2019/01/12</h2>
+<p class="terms">
+  
+  
+  
+  
+  
+</p>
+</div>
+
+
+
+<main>
+
+
+<p>Hola, en este post, explicaré de qué trata el contenido de tipo <strong>draft</strong> y qué tan clave es.</p>
+
+<p><img src="../draft-content/line-draft-front-matter.png" alt="draft content en el front matter" /></p>
+
+<h1 id="que-és-el-contenido-draft">Que és el contenido draft?</h1>
+
+<p><a href="https://es.wikipedia.org/wiki/Sistema_de_gesti%C3%B3n_de_contenidos">Géstores de contenido</a> como drupal, wordpress y [gohugo]() muestran el estado del artículo en <strong>draft</strong> cada vez que se crea uno.</p>
+
+<p>Este estado nos indica que es para fines de pre-producción, para revisión, o están a la espera de una aprobación
+de un grupo, un tercero, etc.</p>
+
+<p>Normalmente dichos articulos no se visualizan en portales de alta demanda porque indican que hay mejoras de por medio o confirmar una otra info en el contenido.</p>
+
+<h1 id="cómo-se-maneja-este-tipo-de-articulos-en-gohugo">Cómo se maneja este tipo de articulos en goHugo?</h1>
+
+<p>Cuando creamos un nuevo articulo mediante este comando en consola:</p>
+
+<pre><code>
+~ hugo new posts/my-articulo-nuevo-cool
+
+</code></pre>
+
+<p>Dicho comando genera un nuevo archivo tomando como plantilla el archivo <code>default.md</code>, este archivo se encuentra en la carpeta raíz del proyecto con el nombre de <strong>archetypes</strong>, y contiene:</p>
+
+<pre><code>  ---
+  title: &quot;{{ replace .TranslationBaseName &quot;-&quot; &quot; &quot; | title }}&quot;
+  date: {{ .Date }}
+  draft: true
+  ---
+</code></pre>
+
+<p>Como se visualiza, el archivo contiene un par de 3 guiones (-) y dentro de este un formato de llave-valor en la parte superior, esta sección es llamada también <a href="https://gohugo.io/content-management/front-matter/">Front Matter</a></p>
+
+<h1 id="cómo-visualizo-mis-artículos-draft">Cómo visualizo mis artículos draft</h1>
+
+<p>Por defecto todo nuevo articulo tiene la llave <strong>draft</strong> con valor <strong>true</strong>, y para ello seguimos los comandos para <a href="/blog/posts/bienvenido#está-vivo-está-vivo">visualizarlo en local</a>.</p>
+
+<h1 id="cómo-cambio-de-estado-a-mis-articulos">Cómo cambio de estado a mis articulos?</h1>
+
+<p>Simplemente actualiza el valor de la llave <strong>draft</strong> de <strong>true</strong> a <strong>false</strong>.</p>
+
+<h2 id="cómo-visualizo-mis-articulos-actualizados">Cómo visualizo mis articulos actualizados?</h2>
+
+<p>Es mucho mas sencillo, en local basta ejecutar este comando:</p>
+
+<pre><code>
+hugo server
+
+</code></pre>
+
+<h1 id="cómo-publico-mis-articulos">Cómo publico mis articulos</h1>
+
+<p>Retirando el parámetro <code>-D</code> en las indicaciones de <a href="/blog/posts/publica-tu-blog-en-github/#generación-del-sitio-y-envío-de-mis-cambios-github">generación y publicación de archivos</a></p>
+
+<h3 id="créditos-gracias-a">Créditos / Gracias a:</h3>
+
+<ul>
+<li><a href="https://es.wikipedia.org/wiki/Sistema_de_gesti%C3%B3n_de_contenidos">Sistema de gestión de contenidos - Wikipedia</a></li>
+<li><a href="https://gohugo.io/content-management/front-matter/">Front Matter - Hugo</a></li>
+</ul>
+
+</main>
+
+    <footer>
+      
+<script async src="//yihui.name/js/center-img.js"></script>
+
+      
+    </footer>
+  </body>
+</html>
+
