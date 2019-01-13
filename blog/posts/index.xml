@@ -6,10 +6,21 @@
     <description>Recent content in Posts on andru255</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 Jan 2019 14:33:59 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 13 Jan 2019 14:53:21 +0000</lastBuildDate>
     
 	<atom:link href="http://andru255.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cómo forkear un tema en gohugo</title>
+      <link>http://andru255.github.io/blog/posts/como-forkear-un-tema-gohugo/</link>
+      <pubDate>Sun, 13 Jan 2019 14:53:21 +0000</pubDate>
+      
+      <guid>http://andru255.github.io/blog/posts/como-forkear-un-tema-gohugo/</guid>
+      <description>Hola, en este post mostraré el cómo mantener tu propio tema a partir de uno ya desarrollado.
+En mi caso usé el tema hugo-classic, y con el tiempo fuí actualizandolo de formar local para generar los estilos que quería, y a la vez tenía la necesidad de compartir este tema con estos nuevos cambios por github.
+Si en un futuro deseo actualizar muchas cosas mas pues no hay mejor forma de aplicarle un fork al tema original y crear uno nuestro :).</description>
+    </item>
     
     <item>
       <title>Qué es draft content</title>
@@ -91,17 +102,6 @@ Implementando una imagen Creamos una imagen llamada handling-images:
       <description>En este post explicaré los pasos a tomar para publicar un blog en html a github
 Conociendo Github pages Github pages  es increíble para alojar tu blog, proyectos e incluso experimentos en html, en este caso, creo un nuevo repositorio por la página de github, en mi caso andru255.github.io por el formato que es [my-nickname].github.io
 Seguimos las instrucciones que indica github una vez se haya creado nuestro repo, hacemos una prueba clonando y agregamos un archivo con extension .</description>
-    </item>
-    
-    <item>
-      <title>Forking The Theme</title>
-      <link>http://andru255.github.io/blog/posts/forking-the-theme/</link>
-      <pubDate>Sat, 04 Nov 2017 21:38:41 -0500</pubDate>
-      
-      <guid>http://andru255.github.io/blog/posts/forking-the-theme/</guid>
-      <description>Hi!, In this post I will show you a great tip to mantain your personal theme, but, in my case I use the hugo-classic
-In many cases, I built some changes on it, and I want to customize more in the future, so I need to fork the original theme for my own maintenance.
-Find the origin and fork it I found the repo path with the following commands on my repo:</description>
     </item>
     
     <item>

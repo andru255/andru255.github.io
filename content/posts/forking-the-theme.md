@@ -1,7 +1,7 @@
 ---
 title: "Forking The Theme"
 date: 2017-11-04T21:38:41-05:00
-draft: false
+draft: true
 ---
 
 Hi!, In this post I will show you a great tip to mantain your personal theme,
