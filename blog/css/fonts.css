@@ -124,12 +124,18 @@
 
 }
 
+/**/
 body {
   font-family: 'fontin_sans_rgregular';
 }
 
 h2 {
   font-size: 2em;
+  padding-top: 0.5em;
+}
+
+h3 {
+  font-size: 1.6em;
 }
 
 code {
@@ -137,9 +143,10 @@ code {
   font-size: 85%;
 }
 
-p {
+p, li {
   font-size: 1.3em;
   line-height: 1.7em;
+  padding-bottom: 1em;
 }
 
 .title {

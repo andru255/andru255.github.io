@@ -98,7 +98,6 @@ Este y otros cambios de estilos lo puedes encontrar en un fork que realicé del 
 ### Créditos / Gracias a:
 
 - [Best Practices Of Combining Typefaces — Smashing Magazine](https://www.smashingmagazine.com/2010/11/best-practices-of-combining-typefaces/)
-
 - [How To Choose A Font — A Step-By-Step Guide! — Smashing Magazine](https://www.smashingmagazine.com/2011/03/how-to-choose-a-typeface/)
 
 [^1]: [Can I use... Support tables for HTML5, CSS3, etc](https://caniuse.com/#search=woff)

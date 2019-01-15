@@ -26,11 +26,7 @@ En el tema que estoy usando, en el archivo `themes/hugo-classic/layouts/_default
 
 ```
 
-La variable nativa ```.Title``` contiene el valor del título de cada articulo, y para 
-
-visualizar el valor que contiene lo realizo ejecutando los comandos para [visualizar mi web en local](/blog/posts/bienvenido#está-vivo-está-vivo)
-
-o [generando los archivos correspondientes](/blog/posts/publica-tu-blog-en-github/#generación-del-sitio-y-envío-de-mis-cambios-github)
+La variable nativa ```.Title``` contiene el valor del título de cada articulo, y para visualizar el valor que contiene lo realizo ejecutando los comandos para [visualizar mi web en local](/blog/posts/bienvenido#está-vivo-está-vivo) o [generando los archivos correspondientes](/blog/posts/publica-tu-blog-en-github/#generación-del-sitio-y-envío-de-mis-cambios-github)
 
 
 ## Variables personalizadas
