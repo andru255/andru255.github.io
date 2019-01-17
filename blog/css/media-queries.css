@@ -1,0 +1,31 @@
+@media only screen and (max-width: 650px) {
+    p, li {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    p, li, a {
+        font-size: 1em;
+    }
+
+    .title {
+        font-size: 1.5em;
+    }
+
+    .date {
+        font-size: 1.3em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    #subtitle-welcome {
+        text-align: center;
+    }
+
+    #post-list .date {
+        font-size: 1em;
+    }
+}
