@@ -2,16 +2,21 @@
 <html lang="en-us">
   <head>
     
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-111667451-1', 'auto');
-ga('send', 'pageview');
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-111667451-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="/blog/favicon.ico" />
+    <link rel="canonical" href="http://andru255.github.io/blog/posts/como-usar-variables-en-gohugo/">
     <title>Cómo usar variables en goHugo | andru255</title>
     <link rel="stylesheet" href="/blog/css/style.css" />
     <link rel="stylesheet" href="/blog/css/fonts.css" />
@@ -63,7 +68,7 @@ ga('send', 'pageview');
 
 
 <p>Hola, en este post mostraré una de las piezas fundamentales de gohugo, el qué son y para que son
-tan útiles en nuestro blog, y se llaman <strong>variables</strong><sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>.</p>
+tan útiles en nuestro blog, y se llaman <strong>variables</strong><sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>.</p>
 
 <h2 id="qué-son-las-variables">Qué son las variables</h2>
 
@@ -99,7 +104,7 @@ myWelcomeMessage=&quot;Bienvenido a mi blog! :)&quot;
 
 </code></pre>
 
-<p>donde visualizamos además en la línea superior el texto <code>[Params]</code><sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup> con esto indicamos a hugo
+<p>donde visualizamos además en la línea superior el texto <code>[Params]</code><sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup> con esto indicamos a hugo
 que tenemos uno o un grupo de variables que vamos a utilizar en nuestro sitio.</p>
 
 <h3 id="dónde-imprimo-la-variable">Dónde imprimo la variable</h3>

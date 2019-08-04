@@ -2,16 +2,21 @@
 <html lang="en-us">
   <head>
     
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-111667451-1', 'auto');
-ga('send', 'pageview');
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-111667451-1', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="/blog/favicon.ico" />
+    <link rel="canonical" href="http://andru255.github.io/blog/posts/como-forkear-un-tema-gohugo/">
     <title>Cómo forkear un tema en gohugo | andru255</title>
     <link rel="stylesheet" href="/blog/css/style.css" />
     <link rel="stylesheet" href="/blog/css/fonts.css" />
@@ -115,7 +120,7 @@ origin	https://github.com/goodroot/hugo-classic.git (push)
 <h1 id="nota">NOTA:</h1>
 
 <blockquote>
-<p>En el último comando, donde almaceno el nuevo <code>origin</code>, agregué a la url el sufijo <strong>.git</strong>, para mas información del por qué se necesita puedes revisar la documentación. <sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup></p>
+<p>En el último comando, donde almaceno el nuevo <code>origin</code>, agregué a la url el sufijo <strong>.git</strong>, para mas información del por qué se necesita puedes revisar la documentación. <sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup></p>
 </blockquote>
 
 <h2 id="cómo-envío-mis-cambios-a-mi-nuevo-repo">Cómo envío mis cambios a mi nuevo repo?</h2>
@@ -179,7 +184,7 @@ con la URL de mi tema.</p>
 <p>Con estos comandos indicamos:</p>
 
 <ul>
-<li>Necesitamos deinicializar <sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup> nuestro actual submodule y luego removerlo</li>
+<li>Necesitamos deinicializar <sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup> nuestro actual submodule y luego removerlo</li>
 <li>Adicionamos de nuevo con nuestro nuevo submodulo.</li>
 </ul>
 
